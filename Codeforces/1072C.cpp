@@ -41,6 +41,13 @@ int main()
    break;
   }
   tot+=i;
+  if(i==1)
+  {
+   printf("%d\n",maxt);
+   for(int i=1;i<=maxt;i++)
+    printf("%d ",i);
+   puts("");
+  }
  }
  printf("%d\n",ans);
  if(ans==0)return 0;
