@@ -27,13 +27,15 @@ int main()
   memset(e,0,sizeof(e));
   memset(fa,0,sizeof(fa));
   if(n==0)return 0;
-  for(int i=1;i<=n;i++)
+  int m;
+  scanf("%d",&m);
+  for(int i=1;i<=m;i++)
    fa[i]=i;
-  for(int i=1;i<=n*(n-1)/2;i++)
+  for(int i=1;i<=n;i++)
    scanf("%d%d%d",&e[i].u,&e[i].v,&e[i].w);
-  sort(e+1,e+n*(n-1)/2+1,cmp);
+  sort(e+1,e+n+1,cmp);
   int cnt=0,ans=0;
-  for(int i=1;;i++)
+  for(int i=1;i<=n;i++)
   {
    if(find(e[i].u)!=find(e[i].v))
    {
@@ -41,9 +43,10 @@ int main()
 	cnt++;
 	ans+=e[i].w;
    }
-   if(cnt==n-1)break;
+   if(cnt==m-1)break;
   }
-  printf("%d\n",ans);
+  if(cnt==m-1)printf("%d\n",ans);
+  else puts("?");
  }
  return 0;
 }
