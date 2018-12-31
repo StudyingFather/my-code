@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define MOD 100000000+7
+#define MOD 1000000007
 int h[10005],num;
 char s[1505];
 int main()
