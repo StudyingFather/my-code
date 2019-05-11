@@ -4,18 +4,18 @@ This repo includes my programming code on some ojs.
 
 If you find some bugs in my code, welcome to open an issue.
 
-## statistics(last updated:2019/02/26)
+## statistics(last updated:2019/05/11)
 ```
-atcoder         13
+atcoder         24
 bzoj            15 (public problems only)
-Codeforces      154
+Codeforces      177
 codevs          86
 hdu             14
-livearchive     14  (hardly used)
-loj             9
-luogu           300
+livearchive     14 (hardly used)
+loj             16
+luogu           371
 poj             48
 projecteuler    20
-spoj            15  (classical problems only)
+spoj            15 (classical problems only)
 uva             41
 ```

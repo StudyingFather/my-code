@@ -7,6 +7,10 @@ struct Segment_Tree
 }tr[400005];
 long long a[100005];
 long long n,m,p;
+void pushup(int x)
+{
+ tr[x].v=(tr[x<<1].v+tr[x<<1|1].v)%p;
+}
 void build(int root,int l,int r)
 {
  tr[root].mul=1;
@@ -17,7 +21,7 @@ void build(int root,int l,int r)
   int mid=(l+r)>>1;
   build(root<<1,l,mid);
   build(root<<1|1,mid+1,r);
-  tr[root].v=(tr[root<<1].v+tr[root<<1|1].v)%p;
+  pushup(root);
  }
  return;
 }
@@ -48,7 +52,7 @@ void update1(int root,int cl,int cr,int l,int r,long long k)
  int mid=(cl+cr)>>1;
  update1(root<<1,cl,mid,l,r,k);
  update1(root<<1|1,mid+1,cr,l,r,k);
- tr[root].v=(tr[root<<1].v+tr[root<<1|1].v)%p;
+ pushup(root);
  return;
 }
 void update2(int root,int cl,int cr,int l,int r,long long k)
@@ -64,7 +68,7 @@ void update2(int root,int cl,int cr,int l,int r,long long k)
  int mid=(cl+cr)>>1;
  update2(root<<1,cl,mid,l,r,k);
  update2(root<<1|1,mid+1,cr,l,r,k);
- tr[root].v=(tr[root<<1].v+tr[root<<1|1].v)%p;
+ pushup(root);
  return;
 }
 long long query(int root,int cl,int cr,int l,int r)
