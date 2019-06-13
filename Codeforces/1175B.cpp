@@ -1,45 +1,28 @@
 #include <iostream>
+#include <stack>
 using namespace std;
-struct operation
-{
- char s[5];
- unsigned x;
-}o[100005];
-unsigned sta[100005],t,mul=1,flag;
+const long long INF=1ll<<32;
+stack<long long> sta;
+char op[5];
 int main()
 {
  ios::sync_with_stdio(false);
- unsigned l,x=0;
+ long long l,ans=0;
  cin>>l;
+ sta.push(1);
  for(int i=1;i<=l;i++)
  {
-  cin>>o[i].s;
-  if(o[i].s[0]=='f')cin>>o[i].x;
+  int x;
+  cin>>op;
+  if(op[0]=='a')ans+=sta.top();
+  else if(op[0]=='f')
+  {
+   cin>>x;
+   sta.push(min(INF,sta.top()*x));
+  }
+  else sta.pop();
  }
- for(int i=1;i<=l;i++)
- {
-  if(o[i].s[0]=='a')
-  {
-   if(flag||x+mul!=(long long)x+mul)
-   {
-    cout<<"OVERFLOW!!!"<<endl;
-    return 0;
-   }
-   x+=mul;
-  }
-  else if(o[i].s[0]=='f')
-  {
-   sta[t++]=o[i].x;
-   if(mul*o[i].x==(long long)mul*o[i].x)mul*=o[i].x;
-   else flag=t;
-  }
-  else
-  {
-   t--;
-   if(flag>t)flag=0;
-   else if(!flag)mul/=sta[t];
-  }
- }
- cout<<x<<endl;
+ if(ans<INF)cout<<ans<<endl;
+ else cout<<"OVERFLOW!!!"<<endl;
  return 0;
 }
