@@ -18,9 +18,9 @@ void dfs(int h,int tot)
   for(int j=1;j<=n;j++)
    if(!vis[j]&&map[i][j]=='#')
    {
-	vis[j]=true;
-	dfs(i+1,tot+1);
-	vis[j]=false;
+    vis[j]=true;
+    dfs(i+1,tot+1);
+    vis[j]=false;
    }
  }
 }
