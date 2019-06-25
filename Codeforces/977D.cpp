@@ -16,19 +16,19 @@ void dfs(int d)
   {
    if(d==1)
    {
-   	vis[i]=1;
-   	ans[d]=a[i];
-   	dfs(d+1);
-   	vis[i]=0;
-   	ans[d]=0;
+    vis[i]=1;
+    ans[d]=a[i];
+    dfs(d+1);
+    vis[i]=0;
+    ans[d]=0;
    }
    else if(3*a[i]==ans[d-1]||a[i]==2*ans[d-1])
    {
-   	vis[i]=1;
-   	ans[d]=a[i];
-   	dfs(d+1);
-   	vis[i]=0;
-   	ans[d]=0;
+    vis[i]=1;
+    ans[d]=a[i];
+    dfs(d+1);
+    vis[i]=0;
+    ans[d]=0;
    }
   }
  }

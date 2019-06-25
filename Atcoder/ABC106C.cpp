@@ -14,16 +14,16 @@ int main()
   for(int i=0;i<len;i++)
    if(s[i]=='1')
    {
-   	if(k==i+1)
-   	{
-   	 cout<<1;
-   	 break;
-   	}
+    if(k==i+1)
+    {
+     cout<<1;
+     break;
+    }
    }
    else
    {
-   	cout<<s[i];
-   	break;
+    cout<<s[i];
+    break;
    }
  }
  return 0;

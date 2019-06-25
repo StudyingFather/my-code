@@ -17,8 +17,8 @@ void solve(int k)
    if(x==0||y==0||x==n+1||y==m+1||map[x][y]=='#')return;
    if(map[x][y]=='E')
    {
-   	ans++;
-   	return;
+    ans++;
+    return;
    }
    if(i==len)i=0;
   }

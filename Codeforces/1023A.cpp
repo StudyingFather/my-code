@@ -26,9 +26,9 @@ int main()
   for(int i=n-1,j=m-1;;i--,j--)
    if(s1[i]=='*')
    {
-   	if(i-1>j)flag=0;
-   	else flag=1;
-   	break;
+    if(i-1>j)flag=0;
+    else flag=1;
+    break;
    }
    else if(s1[i]=='?')continue;
    else if(s1[i]!=s2[j])

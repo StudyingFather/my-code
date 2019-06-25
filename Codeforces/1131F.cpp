@@ -28,8 +28,8 @@ int main()
    int u=i;
    for(int j=1;j<=n;j++)
    {
-	printf("%d ",u);
-	u=pwp[u];
+    printf("%d ",u);
+    u=pwp[u];
    }
    return 0;
   }

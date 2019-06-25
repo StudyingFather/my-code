@@ -15,7 +15,7 @@ int main()
   for(int j=0;j<=m;j++)
    for(int k=0;j+k<=m;k++)
     if(f[i][j][k])
-	{
+    {
      f[i+1][j][k]=(f[i+1][j][k]+f[i][j][k])%MOD;
      if(m-j-k>=1)f[i+1][j+1][k]=(f[i+1][j+1][k]+f[i][j][k]*(m-j-k))%MOD;
      if(j>=1)f[i+1][j-1][k+1]=(f[i+1][j-1][k+1]+f[i][j][k]*j)%MOD;

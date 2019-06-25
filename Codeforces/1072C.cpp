@@ -27,9 +27,9 @@ int main()
   {
    if(a==0)
    {
-   	printf("0\n");
-   	ans=maxt;
-   	break;
+    printf("0\n");
+    ans=maxt;
+    break;
    }
    printf("%d\n",min(a-tot,maxt)?maxt-i+1:maxt-i);
    for(int j=i+1;j<=maxt;j++)

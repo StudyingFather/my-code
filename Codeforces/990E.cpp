@@ -62,8 +62,8 @@ int main()
    int newstart=start+need*i;
    if(road[newstart])
    {
-   	newstart=c[j].r+i;
-   	ans+=a[i];
+    newstart=c[j].r+i;
+    ans+=a[i];
    }
    start=newstart;
    if(start==n+i)ans-=a[i];

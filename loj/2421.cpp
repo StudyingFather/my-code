@@ -12,7 +12,7 @@ int main()
  int ans=200005;
  for(int i=1;i<=n;i++)
  {
-  if(vis[i]==-1)continue;
+  if(vis[i])continue;
   cyc[1]=i;
   vis[i]=1;
   int cnt=1,cur=i;

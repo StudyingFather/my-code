@@ -31,10 +31,10 @@ inline int bfs(int cur)
   for(int i=head[cur];i;i=e[i].next)
    if(vis[e[i].v]==-1)
    {
-   	vis[e[i].v]=!vis[cur];
-   	totp++;
-	if(vis[e[i].v]==0)cntp++;
-   	q.push(e[i].v);
+    vis[e[i].v]=!vis[cur];
+    totp++;
+    if(vis[e[i].v]==0)cntp++;
+    q.push(e[i].v);
    }
    else if(vis[e[i].v]==vis[cur])return 0;
  }
@@ -75,19 +75,19 @@ int main()
   for(int i=1;i<=n;i++)
    if(vis[i]==-1)
    {
-	int cntp=bfs(i);
-   	if(cntp==0)
-	{
-	 ans=0;
-   	 break;
-	}
-   	else if(cntp==-1)
-	{
-	 ans*=3;
-	 if(ans>=MOD)ans%=MOD;
-	 continue;
-	}
-   	else ans*=(fpow(2,cntp)+fpow(2,totp-cntp))%MOD,ans%=MOD;
+    int cntp=bfs(i);
+    if(cntp==0)
+    {
+     ans=0;
+     break;
+    }
+    else if(cntp==-1)
+    {
+     ans*=3;
+     if(ans>=MOD)ans%=MOD;
+     continue;
+    }
+    else ans*=(fpow(2,cntp)+fpow(2,totp-cntp))%MOD,ans%=MOD;
    }
   cout<<ans<<endl;
  }

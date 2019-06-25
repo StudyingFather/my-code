@@ -14,7 +14,7 @@ int main()
  for(int i=1;i<=n;i++)
   for(int j=0;j<=2;j++)
    for(int k=0;k<=2;k++)
-	f[i][(k+j)%3]=(f[i][(k+j)%3]+f[i-1][j]*t[k]%MOD)%MOD;
+    f[i][(k+j)%3]=(f[i][(k+j)%3]+f[i-1][j]*t[k]%MOD)%MOD;
  cout<<f[n][0]<<endl;
  return 0;
 }

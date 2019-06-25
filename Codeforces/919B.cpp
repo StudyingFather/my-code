@@ -22,8 +22,8 @@ int main()
    rest=10-chai(top);
    while(rest<0)
    {
-   	top++;
-   	rest=10-chai(top);
+    top++;
+    rest=10-chai(top);
    }
    num=top*100+rest;
   }

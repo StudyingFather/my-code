@@ -15,8 +15,8 @@ int main()
    int m=n%10;
    if(m!=4&&m!=7)
    {
-   	printf("NO");
-   	return 0;
+    printf("NO");
+    return 0;
    }
    n/=10;
   }

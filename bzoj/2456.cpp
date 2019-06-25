@@ -1,5 +1,4 @@
 #include <cstdio>
-using namespace std;
 int main()
 {
  int n,x;
@@ -9,7 +8,8 @@ int main()
  {
   scanf("%d",&x);
   if(cnt==0)ans=x;
-  (ans==x)?cnt++:cnt--;
+  if(ans==x)cnt++;
+  else cnt--;
  }
  printf("%d\n",ans);
  return 0;

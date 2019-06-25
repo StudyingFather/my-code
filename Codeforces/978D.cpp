@@ -26,24 +26,24 @@ int main()
   {
    if(c[2]!=avec)
    {
-   	ans++;
-   	if(c[2]>avec)c[2]--;
-   	else c[2]++;
+    ans++;
+    if(c[2]>avec)c[2]--;
+    else c[2]++;
    }
    for(int i=2;i<=n-1;i++)
    {
-   	if(c[i+1]>avec)
-   	{
-   	 c[i+1]--;
-   	 c[i]++;
-   	 ans++;
-   	}
-   	else if(c[i+1]<avec)
-   	{
-   	 c[i+1]++;
-   	 c[i]--;
-   	 ans++;
-   	}
+    if(c[i+1]>avec)
+    {
+     c[i+1]--;
+     c[i]++;
+     ans++;
+    }
+    else if(c[i+1]<avec)
+    {
+     c[i+1]++;
+     c[i]--;
+     ans++;
+    }
    }
    if(c[n]!=avec)ans++;
    printf("%d",ans);

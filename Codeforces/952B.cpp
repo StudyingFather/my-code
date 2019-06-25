@@ -11,7 +11,8 @@ int main()
   fflush(stdout);
   getline(cin,re);
   if(re=="no")continue;
-  else if(re=="great"||re=="not bad"||re=="cool"||re=="don't touch me"||re=="don't think so")cout<<"normal";
+  else if(re=="great"||re=="not bad"||re=="cool"||re=="don't touch me"||re=="don't think so")
+   cout<<"normal";
   else cout<<"grumpy";
   fflush(stdout);
   return 0;

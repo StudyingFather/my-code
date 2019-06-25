@@ -51,8 +51,8 @@ int main()
    q1.pop();
    if(q1.empty())
    {
-   	end=1;
-   	break;
+    end=1;
+    break;
    }
    tp1=q1.top();
   }
@@ -61,8 +61,8 @@ int main()
    q2.pop();
    if(q2.empty())
    {
-   	end=1;
-   	break;
+    end=1;
+    break;
    }
    tp2=q2.top();
   }
@@ -71,14 +71,14 @@ int main()
   {
    if(pre[tp1.id]==tp1.c)
    {
-   	ans[i]=m+1;
-   	flag[tp1.id]=1;
+    ans[i]=m+1;
+    flag[tp1.id]=1;
     q1.pop();
    }
    else
    {
-   	printf("-1");
-   	return 0;
+    printf("-1");
+    return 0;
    }
   }
   else if(tp2.s>i)continue;
@@ -86,13 +86,13 @@ int main()
   {
    if(pre[tp2.id]<tp2.c)
    {
-   	ans[i]=tp2.id;
+    ans[i]=tp2.id;
     pre[tp2.id]++;
    }
    else
    {
-	ans[tp2.d]=m+1;
-	flag[tp2.id]=1;
+    ans[tp2.d]=m+1;
+    flag[tp2.id]=1;
     q2.pop();
     tp2=q2.top();
     if(tp2.s>i)continue;

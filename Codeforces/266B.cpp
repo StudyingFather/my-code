@@ -12,8 +12,8 @@ int main()
   for(int i=0;i<=n;)
    if(a[i]=='B'&&a[i+1]=='G')
    {
-   	swap(a[i],a[i+1]);
-   	i+=2;
+    swap(a[i],a[i+1]);
+    i+=2;
    }
    else i++;
  }

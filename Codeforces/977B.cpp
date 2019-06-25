@@ -13,9 +13,9 @@ int main()
   for(int j=0;j<26;j++)
    if(t[i][j]>maxt)
    {
-   	ansi=i;
-   	ansj=j;
-   	maxt=t[i][j];
+    ansi=i;
+    ansj=j;
+    maxt=t[i][j];
    }
  printf("%c%c",ansi+'A',ansj+'A');
  return 0;

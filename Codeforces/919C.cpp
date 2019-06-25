@@ -29,8 +29,8 @@ int main()
    if(s[j][i]=='.')em++;
    else
    {
-   	ans+=max(0,em-k+1);
-   	em=0;
+    ans+=max(0,em-k+1);
+    em=0;
    }
   ans+=max(0,em-k+1);
   em=0;

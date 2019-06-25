@@ -14,8 +14,8 @@ int main()
    lxn++;
    if(lxn>=7)
    {
-   	printf("YES");
-   	return 0;
+    printf("YES");
+    return 0;
    }
   }
   else

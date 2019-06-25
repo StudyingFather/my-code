@@ -21,7 +21,10 @@ int main()
  if(sum>=0)cout<<-1<<endl;
  else
  {
-  long long ans=(h+mins)%abs(f[n])==0?(h+mins)/abs(f[n])*n:(h+mins-f[n])/abs(f[n])*n,cur=h+ans/n*f[n];
+  long long ans;
+  if((h+mins)%abs(f[n]))ans=(h+mins-f[n])/abs(f[n])*n;
+  else ans=(h+mins)/abs(f[n])*n;
+  long long cur=h+ans/n*f[n];
   for(int i=1;i<=n;i++)
    if(cur+f[i]<=0)
    {

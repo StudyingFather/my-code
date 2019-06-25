@@ -13,4 +13,4 @@ int main()
  }
  printf("%.10lf",minp*m);
  return 0;
-} 
+}

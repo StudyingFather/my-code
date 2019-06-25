@@ -22,9 +22,9 @@ int main()
   for(int j=i;j<=n;j++)
    if(fabs(b[j][i])>eps)
    {
-	for(int k=1;k<=n;k++)
-	 swap(b[i][k],b[j][k]);
-	swap(d[i],d[j]);
+    for(int k=1;k<=n;k++)
+     swap(b[i][k],b[j][k]);
+    swap(d[i],d[j]);
    }
   for(int j=1;j<=n;j++)
   {

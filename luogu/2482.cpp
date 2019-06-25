@@ -188,7 +188,8 @@ void battle(int attacker,int defender)//执行决斗过程
   else
   {
    p[curp].hp--;
-   if(p[curp].hp<=0)die(curp,attacker==curp?defender:attacker);//没有受到伤害的一方为伤害来源
+   if(p[curp].hp<=0)die(curp,attacker==curp?defender:attacker);
+   //没有受到伤害的一方为伤害来源
    return;
   }
  }
@@ -334,7 +335,7 @@ int main()
      if(is_used)
      {
       if(i==1&&clear_mark)clear_mark=false;//这句话是为了避免一个小bug
-	  else p[i].is_used[j]=true;
+      else p[i].is_used[j]=true;
       j=0;//使用一张手牌可能会导致前面的手牌变为可用，因此要从头开始判断每一张牌
      }
      if(!p[i].alive)break;//如果该猪已经死亡，就结束它的阶段

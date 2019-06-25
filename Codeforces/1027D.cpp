@@ -1,6 +1,5 @@
 #include <cstdio>
 #include <algorithm>
-#define N 200005
 using namespace std;
 int nxt[200005],cl[200005],sta[200005],c[200005],ind[200005];
 int sum,ans,top,n;

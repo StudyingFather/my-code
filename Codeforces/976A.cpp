@@ -1,5 +1,4 @@
 #include <cstdio>
-using namespace std;
 int n;
 char s[105];
 int main()

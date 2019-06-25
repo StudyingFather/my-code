@@ -14,13 +14,13 @@ int main()
   {
    if(i==0||s[i-1]=='S')
    {
-   	ans=max(res,ans);
+    ans=max(res,ans);
     res=0;
     flag=true;
    }
    else if(!flag)
    {
-   	ans=max(res,ans);
+    ans=max(res,ans);
     res=0;
     i=back;
     flag=true;

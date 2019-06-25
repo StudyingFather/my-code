@@ -12,19 +12,19 @@ int main()
   for(int i=0;i<n;i++)
    if(s[i]=='(')
    {
-   	if(cntl!=k/2)
-   	{
-   	 cntl++;
-   	 res[tot++]='(';
-   	}
+    if(cntl!=k/2)
+    {
+     cntl++;
+     res[tot++]='(';
+    }
    }
    else
    {
-   	if(cntr!=k/2&&cntl>cntr)
-   	{
-   	 cntr++;
-   	 res[tot++]=')';
-   	}
+    if(cntr!=k/2&&cntl>cntr)
+    {
+     cntr++;
+     res[tot++]=')';
+    }
    }
   printf("%s",res);
  }

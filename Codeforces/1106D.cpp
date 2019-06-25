@@ -35,8 +35,8 @@ int main()
   for(int i=head[p];i;i=e[i].next)
    if(!vis[e[i].v])
    {
-	q.push(e[i].v);
-	vis[e[i].v]=1;
+    q.push(e[i].v);
+    vis[e[i].v]=1;
    }
  }
  for(int i=1;i<=n;i++)

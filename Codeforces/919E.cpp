@@ -25,8 +25,8 @@ int main()
   for(int j=0;(j*p+b)<=x;j++)
    if((j*p+b)%p==re&&j%arr==i%arr)
    {
-   	ans+=(x-(j*p+b))/lcm+1;
-   	break;
+    ans+=(x-(j*p+b))/lcm+1;
+    break;
    }
  }
  cout<<ans;

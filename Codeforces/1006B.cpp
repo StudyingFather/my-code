@@ -24,9 +24,9 @@ int main()
   for(int j=1;j<=n;j++)
    if(a[j]==b[i]&&(!vis[j]))
    {
-   	dir[i]=j;
-   	vis[j]=1;
-   	break;
+    dir[i]=j;
+    vis[j]=1;
+    break;
    }
  sort(dir+1,dir+k+1);
  for(int i=1;i<=k;i++)

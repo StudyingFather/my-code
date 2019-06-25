@@ -17,8 +17,8 @@ int main()
    if(s[i]=='(')brl++;
    else
    {
-   	if(brl)brl--;
-   	else brr++;
+    if(brl)brl--;
+    else brr++;
    }
   if(!(brr&&brl))
   {

@@ -50,7 +50,7 @@ int main()
    if(e)unionn(find(num[i]),find(num[j]));
    else
    {
-   	cntt++;
+    cntt++;
     tj[cntt][0]=num[i];
     tj[cntt][1]=num[j];
    }
@@ -59,9 +59,9 @@ int main()
   for(int i=1;i<=cntt;i++)
    if(find(tj[i][0])==find(tj[i][1]))
    {
-   	puts("NO");
-   	flag=0;
-   	break;
+    puts("NO");
+    flag=0;
+    break;
    }
   if(flag)puts("YES");
  }

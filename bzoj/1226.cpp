@@ -19,14 +19,14 @@ int main()
    for(int j=0;j<(1<<8);j++)
     for(int k=-8;k<=7;k++)
      if(f[i][j][k+8]<0x3f3f3f3f)
-	   {
+     {
       if(j&1)f[i+1][j>>1][k+7]=min(f[i+1][j>>1][k+7],f[i][j][k+8]);
       else
-	    {
+      {
        tmp=0x3f3f3f3f;
        for(int h=0;h<=7;h++)
         if(!((j>>h)&1))
-		    {
+        {
          if(i+h>tmp) break;
          tmp=min(tmp,i+h+b[i+h]);
          f[i][j|(1<<h)][h+8]=min(f[i][j|(1<<h)][h+8],f[i][j][k+8]+(i+k?(t[i+k]^t[i+h]):0));

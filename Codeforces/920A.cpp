@@ -20,8 +20,8 @@ int main()
   {
    for(int i=1;i<=n;i++)
    {
-   	if(bed[i]==2)bed[i]=1;
-	if(bed[i]==1)
+    if(bed[i]==2)bed[i]=1;
+    if(bed[i]==1)
     {
      if(i!=1&&bed[i-1]==0)
      {

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
 using namespace std;
 long long pow_2[65],maxc;
 void div_2(long long a)

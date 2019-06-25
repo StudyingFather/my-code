@@ -20,10 +20,8 @@ int main()
   int arr=0;
   for(int i=0;i<ls||arr<lc;i++)
   {
-   if(c[arr]==s[i])
-   	arr++;
-   else if(s[i]=='?'&&g_l[c[arr]-'a'])
-    arr++;
+   if(c[arr]==s[i])arr++;
+   else if(s[i]=='?'&&g_l[c[arr]-'a'])arr++;
    else if(s[i]=='*')
    {
     for(;arr<lc;arr++)
@@ -41,8 +39,8 @@ int main()
    }
    else
    {
-   	flag=0;
-   	break;
+    flag=0;
+    break;
    }
   }
   if(flag)printf("YES\n");

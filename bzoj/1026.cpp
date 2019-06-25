@@ -24,7 +24,7 @@ int calc(int n)
   for(int j=0;j<num[i];j++)
    if(abs(j-num[i+1])>=2)ans+=f[i][j];
   if(abs(num[i+1]-num[i])<2)break;
-  if(i==1)ans++;	
+  if(i==1)ans++;
  }
  return ans;
 }
@@ -37,7 +37,7 @@ int main()
  for(int i=2;i<=10;i++)
   for(int j=0;j<=9;j++)
    for(int k=0;k<=9;k++)
-	if(abs(k-j)>=2)f[i][j]+=f[i-1][k];//先初始化 
+    if(abs(k-j)>=2)f[i][j]+=f[i-1][k];//先初始化
  printf("%d",calc(b)-calc(a-1));
  return 0;
 }

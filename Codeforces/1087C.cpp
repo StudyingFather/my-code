@@ -39,10 +39,10 @@ int main()
   for(int j=miny;j<=maxy;j++)
    if(ma[i][j]>=1&&no_person(i,j))
    {
-   	if(j>0&&ma[i][j]>=ma[i+1][j-1]&&no_person(i+1,j-1))ma[i+1][j-1]=0;
-   	else ma[i][j]=0;
-   	if(ma[i][j]>=ma[i+1][j+1]&&no_person(i+1,j+1))ma[i+1][j+1]=0;
-   	else ma[i][j]=0;
+    if(j>0&&ma[i][j]>=ma[i+1][j-1]&&no_person(i+1,j-1))ma[i+1][j-1]=0;
+    else ma[i][j]=0;
+    if(ma[i][j]>=ma[i+1][j+1]&&no_person(i+1,j+1))ma[i+1][j+1]=0;
+    else ma[i][j]=0;
    }
  for(int i=minx;i<=maxx;i++)
   for(int j=miny;j<=maxy;j++)

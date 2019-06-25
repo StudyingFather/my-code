@@ -16,8 +16,8 @@ int main()
   for(int i=0;i<len/2;i++)
    if(s[i]!=s[len-i-1])
    {
-   	flag=false;
-   	break;
+    flag=false;
+    break;
    }
   if(flag)puts("-1");
   else puts(s);

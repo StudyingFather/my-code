@@ -15,8 +15,8 @@ int main()
   {
    if(a[i-1]<w&&a[i-1]<h)
    {
-   	printf("NO");
-   	return 0;
+    printf("NO");
+    return 0;
    }
    else if(a[i-1]<w)a[i]=h;
    else if(a[i-1]<h)a[i]=w;

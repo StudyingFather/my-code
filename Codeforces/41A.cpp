@@ -13,8 +13,8 @@ int main()
   for(int i=0;i<len;i++)
    if(s[i]!=t[len-i-1])
    {
-   	flag=false;
-   	break;
+    flag=false;
+    break;
    }
   if(flag)puts("YES");
   else puts("NO");

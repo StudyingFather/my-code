@@ -2,14 +2,12 @@
 #include <cstring>
 #include <iostream>
 #include <algorithm>
-#define N 501000
-#define LOGN 20
 using namespace std;
 struct Eli
 {
  int v,next;
-}e[N<<1];
-int head[N],cnt;
+}e[1000005];
+int head[500005],cnt;
 inline void add(int u,int v)
 {
  e[++cnt].v=v;
@@ -17,7 +15,7 @@ inline void add(int u,int v)
  head[u]=cnt;
 }
 int n,m,root;
-int dep[N],fa[N][LOGN];
+int dep[500005],fa[500005][25];
 void dfs(int x,int p)
 {
  int i,v;
@@ -30,16 +28,16 @@ void dfs(int x,int p)
   dfs(v,x);
  }
 }
-int f[N];
+int f[500005];
 int find(int x)
 {
  return f[x]==x?x:f[x]=find(f[x]);
 }
-void array()
+void init()
 {
  for(int i=1;i<=n;i++)
   f[i]=i;
- for(int j=1;j<LOGN;j++)
+ for(int j=1;j<25;j++)
   for(int i=1;i<=n;i++)
    fa[i][j]=fa[fa[i][j-1]][j-1];
 }
@@ -48,10 +46,10 @@ int getlca(int &ans,int x,int y)
  ans=0;
  int i;
  if(dep[x]<dep[y])swap(x,y);
- for(i=LOGN-1;~i;i--)
+ for(i=24;~i;i--)
   if(dep[fa[x][i]]>=dep[y])ans+=1<<i,x=fa[x][i];
  if(x==y)return x;
- for(i=LOGN-1;~i;i--)
+ for(i=24;~i;i--)
   if(fa[x][i]!=fa[y][i])ans+=1<<(i+1),x=fa[x][i],y=fa[y][i];
  ans+=2;
  return fa[x][0];
@@ -66,7 +64,7 @@ int main()
   scanf("%d%d",&a,&b);
   add(a,b),add(b,a);
  }
- dfs(1,0),array();
+ dfs(1,0),init();
  long long ans=0;
  for(int pos=root;m--;)
  {

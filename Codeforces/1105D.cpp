@@ -29,10 +29,10 @@ int main()
    if(ma[i][j]=='#')cnt--;
    else if(ma[i][j]>='1'&&ma[i][j]<='9')
    {
-	ma[i][j]-='0';
-	q[ma[i][j]].push({i,j,0,0});
-	used[ma[i][j]]++;
-	cnt--;
+    ma[i][j]-='0';
+    q[ma[i][j]].push({i,j,0,0});
+    used[ma[i][j]]++;
+    cnt--;
    }
  int cur=1,t=0;
  while(cnt)
@@ -43,13 +43,13 @@ int main()
    if(x.t2==s[cur]&&x.t1==t)break;
    if(x.t1>t)break;
    for(int i=0;i<=3;i++)
-	if(ma[x.x+tx[i]][x.y+ty[i]]=='.')
-	{
-	 q[cur].push({x.x+tx[i],x.y+ty[i],x.t1!=t&&x.t2!=0?x.t1+1:x.t1,x.t1!=t&&x.t2!=0?1:x.t2+1});
-	 ma[x.x+tx[i]][x.y+ty[i]]=cur;
-	 used[cur]++;
-	 cnt--;
-	}
+    if(ma[x.x+tx[i]][x.y+ty[i]]=='.')
+    {
+     q[cur].push({x.x+tx[i],x.y+ty[i],x.t1!=t&&x.t2!=0?x.t1+1:x.t1,x.t1!=t&&x.t2!=0?1:x.t2+1});
+     ma[x.x+tx[i]][x.y+ty[i]]=cur;
+     used[cur]++;
+     cnt--;
+    }
    q[cur].pop();
    if(!cnt)break;
   }

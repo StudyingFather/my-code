@@ -1,7 +1,6 @@
-#include<stdio.h>
-#include<algorithm>
+#include <cstdio>
+#include <algorithm>
 using namespace std;
-typedef long long ll;
 struct node
 {
  int x,y,v;

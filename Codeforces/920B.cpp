@@ -31,9 +31,9 @@ int main()
    if(w[i])continue;
    if(t>a[i].r)
    {
-   	printf("0 ");
-   	s++;
-   	a[i].id=a[i].l=a[i].r=0;
+    printf("0 ");
+    s++;
+    a[i].id=a[i].l=a[i].r=0;
    }
    else if(t>=a[i].l)
    {
@@ -44,9 +44,9 @@ int main()
    }
    if(i==n)
    {
-   	i=s;
-   	sort(a+1,a+n+1,cmp);
-   	t=a[s+1].l;
+    i=s;
+    sort(a+1,a+n+1,cmp);
+    t=a[s+1].l;
    }
    if(s==n)break;
   }
