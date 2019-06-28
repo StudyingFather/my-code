@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MOD 100000000
-int a[15][15],f[13][4105],F[15],ans;
+int a[15][15],f[15][4105],F[15],ans;
 bool s[4105];
 int main()
 {

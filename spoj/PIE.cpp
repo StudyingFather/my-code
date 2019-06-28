@@ -3,7 +3,7 @@
 #define PI 3.1415926535897
 using namespace std;
 int n,f;
-double maxx,a[10010];
+double maxx,a[10005];
 bool qgs(double mid)
 {
  int js=0;

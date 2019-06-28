@@ -1,4 +1,3 @@
-//在poj上使用G++编译，C++会TLE 
 #include <cstdio>
 #include <algorithm>
 using namespace std;

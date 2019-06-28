@@ -51,8 +51,8 @@ int main()
   for(int i=head[p];i;i=e[i].next)
    if(dist[p]+e[i].w<dist[e[i].v])
    {
-	dist[e[i].v]=dist[p]+e[i].w;
-	q.push((node){e[i].v,dist[e[i].v]});
+    dist[e[i].v]=dist[p]+e[i].w;
+    q.push((node){e[i].v,dist[e[i].v]});
    }
  }
  printf("%d\n",dist[b]);

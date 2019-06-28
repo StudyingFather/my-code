@@ -17,7 +17,7 @@ int main()
   for(int j=1;j<=2000;j++)
   {
    s[i][j]=s[i][j-1]+s[i-1][j]-s[i-1][j-1];
-    if(f[i][j]==0&&j<=i)s[i][j]++;
+   if(f[i][j]==0&&j<=i)s[i][j]++;
   }
  while(t--)
  {

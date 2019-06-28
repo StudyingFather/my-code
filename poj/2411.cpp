@@ -13,8 +13,8 @@ int main()
    for(int j=0;j<m;j++)
     if(i>>j&1)
     {
-   	 odd|=cnt;
-   	 cnt=0;
+     odd|=cnt;
+     cnt=0;
     }
     else cnt^=1;
    s[i]=!(odd|cnt);
@@ -23,9 +23,9 @@ int main()
   for(int i=1;i<=n;i++)
    for(int j=0;j<1<<m;j++)
    {
-   	f[i][j]=0;
-   	for(int k=0;k<1<<m;k++)
-   	 if(!(j&k)&&s[j|k])f[i][j]+=f[i-1][k];
+    f[i][j]=0;
+    for(int k=0;k<1<<m;k++)
+     if(!(j&k)&&s[j|k])f[i][j]+=f[i-1][k];
    }
   cout<<f[n][0]<<endl;
  }

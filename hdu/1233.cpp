@@ -38,8 +38,8 @@ int main()
    if(find(e[i].u)!=find(e[i].v))
    {
     unionn(e[i].u,e[i].v);
-	cnt++;
-	ans+=e[i].w;
+    cnt++;
+    ans+=e[i].w;
    }
    if(cnt==n-1)break;
   }

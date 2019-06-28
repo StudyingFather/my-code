@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 int left,chance;
 char s[105],s2[105];
 int win,lose;

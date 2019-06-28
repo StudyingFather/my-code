@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdio>
 #include <cstring>
-#define searchnext(x,y,k) y==5? search(x+1,1,k):search(x,y+1,k)
 using namespace std;
 bool mp[6][6],t[6][6],ans;
 int s,xx[4]={0,0,-1,1},yy[4]={-1,1,0,0};
@@ -38,8 +37,7 @@ void search(int x,int y,int k)
 {
  if(k==s)
  {
-  if(judans())
-  ans=1;
+  if(judans())ans=1;
   return;
  }
  if(ans||x==6)return;
@@ -47,7 +45,8 @@ void search(int x,int y,int k)
  {
   if(mp[x][i])continue;
   mp[x][i]=1;
-  searchnext(x,i,k+1);
+  if(i==5)search(x+1,1,k+1);
+  else search(x,i+1,k+1);
   mp[x][i]=0;
  }
  for(int i=x+1;i<=5;i++)
@@ -55,7 +54,8 @@ void search(int x,int y,int k)
   {
    if(mp[i][j])continue;
    mp[i][j]=1;
-   searchnext(i,j,k+1);
+   if(j==5)search(i+1,j,k+1);
+   else search(i,j+1,k+1);
    mp[i][j]=0;
   }
 }

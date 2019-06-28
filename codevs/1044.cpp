@@ -2,9 +2,8 @@
 #include <cstring>
 #include <string>
 #include <algorithm>
-#define maxn 5005
 using namespace std;
-int n,f[maxn],a[maxn],ans,s[25],arr=1;
+int n,f[5005],a[5005],ans,s[25],arr=1;
 int main()
 {
  int n=1;

@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<string.h>
-int sum[1010][1010],n;
+#include <stdio.h>
+#include <string.h>
+int sum[1005][1005],n;
 int lowbit(int x)
 {
  return x&(-x);
@@ -49,16 +49,16 @@ int main()
    scanf("%s",c);
    if(c[0]=='C')
    {
-	scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
-	change(x1,y1);
-	change(x1,y2+1);
-	change(x2+1,y1);
-	change(x2+1,y2+1);
+    scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+    change(x1,y1);
+    change(x1,y2+1);
+    change(x2+1,y1);
+    change(x2+1,y2+1);
    }
    else
    {
-	scanf("%d%d",&x1,&y1);
-	printf("%d\n",query(x1,y1)&1);
+    scanf("%d%d",&x1,&y1);
+    printf("%d\n",query(x1,y1)&1);
    }
   }
   if(T)printf("\n");

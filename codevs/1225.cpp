@@ -1,9 +1,12 @@
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
-struct data{int a[3][3];}d[2][362880]; 
+struct data
+{
+ int a[3][3];
+}d[2][400005];
 int xx[4]={1,-1,0,0},yy[4]={0,0,1,-1};
-int mp[2][362881],step[2][362880],flag=0;
+int mp[2][400005],step[2][400005],flag=0;
 int t[2],w[2]={1,1};
 void sp(int &a,int &b)
 {
@@ -19,7 +22,7 @@ bool pd(int x,int y)
 const int fac[10]={1,1,2,6,24,120,720,5040,40320,362880};
 int cantor(int x)
 {
- int m[9]; 
+ int m[9];
  for(int i=9;i>=1;i--)
  {
   m[i]=x%10;
@@ -57,8 +60,8 @@ void search(int k)
    if(d[k][t[k]].a[i][j]==0)
    {
     x=i;
-	y=j;
-	break;
+    y=j;
+    break;
    }
  for(int dir=0;dir<4;dir++)
  {
@@ -67,22 +70,22 @@ void search(int k)
     d[k][w[k]].a[i][j]=d[k][t[k]].a[i][j];
   int p=x+xx[dir],q=y+yy[dir];
   if(pd(p,q))
-  { 
+  {
    sp(d[k][w[k]].a[x][y],d[k][w[k]].a[p][q]);
    int temp=Hash(d[k][w[k]].a);
    if(mp[k][temp]==-1)
    {
     step[k][w[k]]=step[k][t[k]]+1;
-    mp[k][temp]=step[k][w[k]];   
+    mp[k][temp]=step[k][w[k]];
     if(mp[0][temp]!=-1&&mp[1][temp]!=-1)
     {
      cout<<mp[0][temp]+mp[1][temp];
      flag=1;
      return;
-    }        
+    }
     w[k]++;
    }
-  } 
+  }
  }
  t[k]++;
 }

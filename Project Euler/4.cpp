@@ -1,6 +1,6 @@
 #include <cstdio>
 #include <algorithm>
-using namespace std; 
+using namespace std;
 int ans=0;
 bool is_hw(int num)
 {
@@ -9,7 +9,7 @@ bool is_hw(int num)
  {
   num2*=10;
   num2+=num1%10;
-  num1/=10; 
+  num1/=10;
  }
  return num2==num;
 }

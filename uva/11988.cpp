@@ -17,10 +17,10 @@ int main()
    else if(ch==']')cur=last;
    else
    {
-   	next[i]=next[cur];
-   	next[cur]=i;
-   	if(cur==last)last=i;
-   	cur=i;
+    next[i]=next[cur];
+    next[cur]=i;
+    if(cur==last)last=i;
+    cur=i;
    }
   }
   for(int i=next[0];i!=0;i=next[i])

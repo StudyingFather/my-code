@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
 #define MOD 1000000007
 using namespace std;
 int a[1005],t[1005],f[1005][1005],b[1005];
@@ -50,7 +50,7 @@ int main()
    scanf("%d",&a[i]);
    b[i]=a[i];
   }
-  init();		
+  init();
   f[0][0]=1;
   for(int i=1;i<=m;i++)
   {
@@ -58,8 +58,8 @@ int main()
    update(a[0],f[i-1][0]);
    for(int j=1;j<=n;j++)
    {
-	f[i][j]=query(a[j]-1)%MOD;
-	update(a[j],f[i-1][j]%MOD);
+    f[i][j]=query(a[j]-1)%MOD;
+    update(a[j],f[i-1][j]%MOD);
    }
   }
   for(int i=m;i<=n;i++)

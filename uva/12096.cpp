@@ -33,17 +33,17 @@ int main()
    else if(op[0]=='D')s.push(s.top());
    else
    {
-   	set<int> x1=Setcache[s.top()];s.pop();
-   	set<int> x2=Setcache[s.top()];s.pop();
-   	set<int> x;
-   	if(op[0]=='U')set_union(x1.begin(),x1.end(),x2.begin(),x2.end(),insert_iterator<set<int> >(x,x.begin()));
-   	if(op[0]=='I')set_intersection(x1.begin(),x1.end(),x2.begin(),x2.end(),insert_iterator<set<int> >(x,x.begin()));
-   	if(op[0]=='A')
-   	{
-   	 x=x2;
-   	 x.insert(ID(x1));
-   	}
-   	s.push(ID(x));
+    set<int> x1=Setcache[s.top()];s.pop();
+    set<int> x2=Setcache[s.top()];s.pop();
+    set<int> x;
+    if(op[0]=='U')set_union(x1.begin(),x1.end(),x2.begin(),x2.end(),insert_iterator<set<int> >(x,x.begin()));
+    if(op[0]=='I')set_intersection(x1.begin(),x1.end(),x2.begin(),x2.end(),insert_iterator<set<int> >(x,x.begin()));
+    if(op[0]=='A')
+    {
+     x=x2;
+     x.insert(ID(x1));
+    }
+    s.push(ID(x));
    }
    cout<<Setcache[s.top()].size()<<endl;
   }

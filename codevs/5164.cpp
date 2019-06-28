@@ -1,20 +1,19 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define ITSLUCAS 233
-double gogogo() 
+#include <stdio.h>
+#include <stdlib.h>
+double calc() 
 {
  char a[10];
  scanf("%s", a);
- switch (a[0])
+ switch(a[0])
  {
   case '+':
-  return gogogo()+gogogo();
+  return calc()+calc();
   case '-':
-  return gogogo()-gogogo();
+  return calc()-calc();
   case '*':
-  return gogogo()*gogogo();
+  return calc()*calc();
   case '/':
-  return gogogo()/gogogo();
+  return calc()/calc();
   default:
   return atof(a);
  }
@@ -22,7 +21,7 @@ double gogogo()
 int main()
 {
  double ans;
- ans=gogogo();
+ ans=calc();
  printf("%lf\n",ans);
  return 0;
 }

@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 int a[200005],n;
 int main()
 {

@@ -18,23 +18,23 @@ int main()
   {
    if(a[fa]==b[fb]&&a[fa]<c[fc])
    {
-	x=a[fa++];
-	fb++;
+    x=a[fa++];
+    fb++;
    }
    else if(a[fa]==c[fc]&&a[fa]<b[fb])
    {
-	x=a[fa++];
-	fc++;
+    x=a[fa++];
+    fc++;
    }
    else if(c[fc]==b[fb]&&c[fc]<a[fa])
    {
-	x=c[fc++];
-	fb++;
+    x=c[fc++];
+    fb++;
    }
    else if(c[fc]==b[fb]&&b[fb]==a[fa])
    {
-	x=a[fa++];
-	fb++;fc++;
+    x=a[fa++];
+    fb++;fc++;
    }
   }
   total++;

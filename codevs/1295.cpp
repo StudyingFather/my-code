@@ -1,6 +1,6 @@
 #include <stdio.h>
-bool a[100000],b[1000000],c[100000];
-int d[100000];
+bool a[100005],b[1000005],c[100005];
+int d[100005];
 bool p;
 int n,ans=0;
 void dfs(int dep)

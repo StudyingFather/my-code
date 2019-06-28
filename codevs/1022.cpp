@@ -1,5 +1,5 @@
-#include<iostream>
-#include<cstdio>
+#include <iostream>
+#include <cstdio>
 using namespace std;
 int map[105][105],girl[105][105][2],used[105][105];
 int n,m,k,t,ans;
@@ -16,7 +16,7 @@ bool find(int x,int y)
      girl[x+p[i][0]][y+p[i][1]][0]=x;
      girl[x+p[i][0]][y+p[i][1]][1]=y;
      girl[x][y][0]=x+p[i][0];
-	   girl[x][y][1]=y+p[i][1];
+     girl[x][y][1]=y+p[i][1];
      return true;
     }
    }

@@ -1,5 +1,5 @@
-#include<stdio.h>
-int a[100001],n,m,sum[100001],c[100001];
+#include <stdio.h>
+int a[100005],n,m,sum[100005],c[100005];
 int lowbit(int x)
 {
  return x&(-x);  

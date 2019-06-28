@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-int a[201],b[201],c[201],d[101],ans[10001],l,k;
+int a[205],b[205],c[205],d[105],ans[10005],l,k;
 char s[105];
 int main()
 {

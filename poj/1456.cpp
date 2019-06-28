@@ -29,7 +29,7 @@ int main()
      ans+=a[i].p;
      vis[j]=1;
      break;
-	}
+    }
   printf("%d\n",ans);
  }
  return 0;

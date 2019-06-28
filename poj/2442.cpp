@@ -2,9 +2,8 @@
 #include <algorithm>
 #include <queue>
 using namespace std;
-const int MAXN=2000+10;
 const int inf=0x3f3f3f;
-int a[MAXN],b[MAXN],c[MAXN];
+int a[2005],b[2005],c[2005];
 int n,m;
 priority_queue<int>q;
 void del()

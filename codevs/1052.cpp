@@ -23,9 +23,9 @@ int main()
   for(int j=a[i].t;j>=1;j--)
    if(!tong[j])
    {
-   	ans+=a[i].v;
-   	tong[j]=!tong[j];
-   	break;
+    ans+=a[i].v;
+    tong[j]=!tong[j];
+    break;
    }
  printf("%d",ans);
  return 0;

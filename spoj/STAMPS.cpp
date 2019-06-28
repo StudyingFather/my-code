@@ -26,8 +26,8 @@ int main()
    need-=a[i];
    if(need<=0)
    {
-   	printf("%d\n",i);
-   	break;
+    printf("%d\n",i);
+    break;
    }
   }
   if(need>0)printf("impossible\n");

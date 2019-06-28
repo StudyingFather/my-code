@@ -18,12 +18,12 @@ int main()
    else
    {
     if(s[i]=='b')
-	 for(int j=1;j<=a;j++) 
-	  printf(" ");
+     for(int j=1;j<=a;j++) 
+      printf(" ");
     else
     {
      if(s[i]=='!') 
-	  printf("\n");
+      printf("\n");
      else
       for(int j=1;j<=a;j++)
        printf("%c",s[i]);

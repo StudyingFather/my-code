@@ -1,5 +1,4 @@
 #include <cstdio>
-using namespace std;
 int num,n,min=2147483647,max=-2147483648;
 int main()
 {

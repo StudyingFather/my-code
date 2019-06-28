@@ -16,8 +16,8 @@ int main()
    if(c=='<'||c=='>')
    {
     j++;
-	l=0;
-	continue;
+    l=0;
+    continue;
    }
    s[j][l]=c;
    l++;

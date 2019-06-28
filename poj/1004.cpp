@@ -7,6 +7,6 @@ int main()
   scanf("%f",&a);
   sum+=a;
  }
- printf("$%.2lf\n",sum/12);//G++用.2lf会WA，这一点很怪异 
+ printf("$%.2lf\n",sum/12);//G++用.2lf会WA，这一点很怪异
  return 0;
 }

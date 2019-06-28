@@ -5,8 +5,8 @@ using namespace std;
 struct node
 {
  int l,r,ans;
-}que[10010];
-int a[20010],fa[40010],n,m,t;
+}que[10005];
+int a[20005],fa[40005],n,m,t;
 void init()
 {
  scanf("%d%d",&n,&m);

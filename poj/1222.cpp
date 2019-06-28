@@ -21,7 +21,7 @@ void solve(int num)
       for(int n=0;n<=1;n++)
       {
        int flag=1;
-	   memcpy(moni,light,sizeof(light));
+       memcpy(moni,light,sizeof(light));
        memset(anniu,0,sizeof(anniu));
        if(i)an(1,1);
        if(j)an(1,2);
@@ -37,8 +37,8 @@ void solve(int num)
          if(moni[r][c])flag=0;
        if(flag)
        {
-       	printf("PUZZLZ #%d\n",num);
-		for(int r=1;r<=5;r++)
+        printf("PUZZLZ #%d\n",num);
+        for(int r=1;r<=5;r++)
         {
          for(int c=1;c<=6;c++)
           printf("%d ",anniu[r][c]);

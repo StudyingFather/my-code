@@ -1,13 +1,13 @@
 #include <stdio.h>
 int n,m,cnt;
-int d[10001],heads[10001],q[10001],head,tail;
-bool viss[10001];
+int d[10005],heads[10005],q[10005],head,tail;
+bool viss[10005];
 struct node
 {
  int v;
  int next;
  int val;
-}edge[10001];
+}edge[10005];
 void add(int x,int y,int z)
 {
  edge[++cnt].v=y;
@@ -27,12 +27,12 @@ void spfa()
   {
    if(d[q[head]]+edge[i].val<d[edge[i].v])
    {
-	d[edge[i].v]=d[q[head]]+edge[i].val;
-	if(!viss[edge[i].v])
-	{
-	 q[tail++]=edge[i].v;
-	 viss[edge[i].v]=1;
-	}
+    d[edge[i].v]=d[q[head]]+edge[i].val;
+    if(!viss[edge[i].v])
+    {
+     q[tail++]=edge[i].v;
+     viss[edge[i].v]=1;
+    }
    }
   }
   viss[q[head]]=0;

@@ -9,16 +9,16 @@ int main()
   for(int j=2;p!=1;j++)
    while(p%j==0)
    {
-   	p/=j;
-   	a[j]++;
+    p/=j;
+    a[j]++;
    }
  }
  for(int i=2;i<=n;i++)
   if(a[i])
    if(first)
    {
-   	printf("%d^%d ",i,a[i]);
-   	first=0;
+    printf("%d^%d ",i,a[i]);
+    first=0;
    }
    else printf("* %d^%d ",i,a[i]);
  return 0;

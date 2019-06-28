@@ -6,7 +6,7 @@ char a[305],b[305];
 int main()
 {
  char f;
- while(scanf("%s %c %s",a,&f,b)==3) 
+ while(scanf("%s %c %s",a,&f,b)==3)
  {
   printf("%s %c %s\n",a,f,b);
   double a1=atof(a);
@@ -16,8 +16,8 @@ int main()
   if (f=='+')
   {
    if((a1+b1)>MAX)printf("result too big\n");
-  } 
-  else if (f=='*') 
+  }
+  else if (f=='*')
   {
    if((a1*b1)>MAX)printf("result too big\n");
   }

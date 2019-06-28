@@ -25,7 +25,7 @@ void dfs(int d)
   if(!used[i]&&is_prime(a[d-1]+i))
    if(d!=n||(d==n&&is_prime(a[1]+i)))
    {
-   	used[i]=1;
+    used[i]=1;
     a[d]=i;
     dfs(d+1);
     used[i]=0;

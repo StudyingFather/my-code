@@ -1,7 +1,7 @@
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
-#include<queue> 
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+#include <queue>
 using namespace std;
 struct node
 {
@@ -26,8 +26,8 @@ int main()
    q.pop();
    if(u.num==k)
    {
-   	printf("%d",u.cnt);
-   	return 0;
+    printf("%d",u.cnt);
+    return 0;
    }
    node v=u;
    v.cnt++;
@@ -40,4 +40,4 @@ int main()
   }
  }
  return 0;
-} 
+}

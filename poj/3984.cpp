@@ -1,7 +1,7 @@
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
-#include<queue>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+#include <queue>
 using namespace std;
 struct node
 {
@@ -46,9 +46,9 @@ int main()
    if(!map[next.x][next.y])
    {
     f[next.x][next.y]=next.step;
-	last[next.x][next.y].x=tmp.x;
-	last[next.x][next.y].y=tmp.y;
-	q.push(next);
+    last[next.x][next.y].x=tmp.x;
+    last[next.x][next.y].y=tmp.y;
+    q.push(next);
    }
   }
  }

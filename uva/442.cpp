@@ -7,7 +7,7 @@ struct Matrix
 {
  int a,b;
  Matrix(int a=0,int b=0):a(a),b(b){}
-}m[26];
+}m[35];
 stack<Matrix>s;
 int main()
 {

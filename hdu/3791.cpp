@@ -34,7 +34,7 @@ int main()
     {
      flag=0;
      break;
-	}
+    }
    if(flag)puts("YES");
    else puts("NO");
   }

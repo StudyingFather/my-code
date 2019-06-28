@@ -33,29 +33,29 @@ int main()
   for(int i=1;i<k;i++)
    for(int j=i+1;j<k;j++)
    {
-    if((long long)d[i][j]+a[j][k]+a[k][i]<ans)//更新路径 
+    if((long long)d[i][j]+a[j][k]+a[k][i]<ans)//更新路径
     {
      ans=d[i][j]+a[j][k]+a[k][i];
      path.clear();
      path.push_back(i);
      get_path(i,j);//递归求i,j间的路径
-	 path.push_back(j);
-	 path.push_back(k); 
-	}
+     path.push_back(j);
+     path.push_back(k);
+    }
    }
-  for(int i=1;i<=n;i++)//Floyd求最短路，并更新中转点 
+  for(int i=1;i<=n;i++)//Floyd求最短路，并更新中转点
    for(int j=1;j<=n;j++)
    {
     if(d[i][k]+d[k][j]<d[i][j])
     {
      d[i][j]=d[i][k]+d[k][j];
      pos[i][j]=k;
-	}
+    }
    }
  }
  if(ans==INF)puts("No solution.");
  else
-  for(int i=0;i<path.size();i++)//输出路径 
+  for(int i=0;i<path.size();i++)//输出路径
    printf("%d ",path[i]);
  return 0;
 }

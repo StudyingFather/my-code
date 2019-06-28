@@ -24,9 +24,9 @@ int main()
      if(i)f[i][j][k][l]=max(f[i][j][k][l],f[i-1][j][k][l]);
      if(j)f[i][j][k][l]=max(f[i][j][k][l],f[i][j-1][k][l]);
      if(k)f[i][j][k][l]=max(f[i][j][k][l],f[i][j][k-1][l]);
-	   if(l)f[i][j][k][l]=max(f[i][j][k][l],f[i][j][k][l-1]);
-	   f[i][j][k][l]+=s[i+2*j+3*k+4*l];
-	  }
+     if(l)f[i][j][k][l]=max(f[i][j][k][l],f[i][j][k][l-1]);
+     f[i][j][k][l]+=s[i+2*j+3*k+4*l];
+    }
  printf("%d",f[a][b][c][d]);
  return 0;
 }

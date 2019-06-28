@@ -16,12 +16,12 @@ inline void addedge(int now,int to,int val,int &ecnt,edge e[],int ehead[])
  e[ecnt].next=ehead[now];
  ehead[now]=ecnt;
 }
-int fa[51000];
+int fa[50005];
 int find_set(int now)
 {
  return fa[now]==now?now:fa[now]=find_set(fa[now]);
 } 
-int vis[51000],dis[51000];
+int vis[50005],dis[50005];
 void tarjan(int now)
 {
  vis[now]=1;

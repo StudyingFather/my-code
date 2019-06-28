@@ -24,8 +24,8 @@ int main()
   for(int i=1;i<=n;i++)
    if(t<=a[i].l)
    {
-   	ans++;
-   	t=a[i].r;
+    ans++;
+    t=a[i].r;
    }
   printf("%d\n",ans);
  }

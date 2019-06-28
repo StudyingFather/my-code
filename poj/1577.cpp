@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <cstdio>
 #include <iostream>
-#include <ctype.h>
-#include <string.h>
+#include <cctype>
+#include <cstring>
 int p,num;
 char s[101][101];
 struct node

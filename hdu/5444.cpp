@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
 using namespace std;
 struct tree
 {
@@ -54,9 +54,9 @@ int main()
    scanf("%d",&a);
    if(i==1)
    {
-	tr[tot].l=tr[tot].r=0;
-	tr[tot].val=a;
-	tot++;
+    tr[tot].l=tr[tot].r=0;
+    tr[tot].val=a;
+    tot++;
    }
    else insert(1,a);
   }

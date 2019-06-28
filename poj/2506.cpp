@@ -1,7 +1,7 @@
-#include<cstdio>
-#include<cstring>
-#include<cstdlib>
-char C[260][1000],a[1000],b[1000];
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+char C[265][1005],a[1005],b[1005];
 void mult(char c[],char t[],int m)
 {
  int i,l,k,flag,add=0;
@@ -12,24 +12,24 @@ void mult(char c[],char t[],int m)
  for(i=0;i<l;i++)
  {
   k=s[i]*m+add;
-  if(k>=10) 
+  if(k>=10)
   {
    s[i]=k%10;
    add=k/10;
    flag=1;
-  } 
-  else 
+  }
+  else
   {
    s[i]=k;
    flag=0;
    add=0;
   }
  }
- if(flag) 
+ if(flag)
  {
   l=i+1;
   s[i]=add;
- } 
+ }
  else l=i;
  for(i=0;i<l;i++)
   t[l-1-i]=s[i]+'0';
@@ -39,7 +39,7 @@ void add(char a[],char b[],char back[])
 {
  int i,j,k,up,x,y,z,l;
  char *c;
- if(strlen(a)>strlen(b))l=strlen(a)+2; 
+ if(strlen(a)>strlen(b))l=strlen(a)+2;
  else l=strlen(b)+2;
  c=(char *)malloc(l*sizeof(char));
  i=strlen(a)-1;
@@ -48,17 +48,17 @@ void add(char a[],char b[],char back[])
  up=0;
  while(i>=0||j>=0)
  {
-  if(i<0)x='0'; 
+  if(i<0)x='0';
   else x=a[i];
-  if(j<0)y='0'; 
+  if(j<0)y='0';
   else y=b[j];
   z=x-'0'+y-'0';
   if(up)z+=1;
-  if(z>9) 
+  if(z>9)
   {
    up=1;
    z%=10;
-  } 
+  }
   else up=0;
   c[k++]=z+'0';
   i--;

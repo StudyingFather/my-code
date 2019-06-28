@@ -23,7 +23,7 @@ int main()
    }
    if(i<=n-1)
    {
-   	if(j<kz-1)printf("\n");
+    if(j<kz-1)printf("\n");
     else if(i<n-1)printf("\n");
    }
   }

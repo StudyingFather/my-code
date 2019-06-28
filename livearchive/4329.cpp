@@ -2,9 +2,8 @@
 #include <cstring>
 #include <iostream>
 using namespace std;
-typedef long long ll;
 int A[100005],C[100005];
-ll c[20005],d[20005];
+long long c[20005],d[20005];
 int lowbit(int x)
 {
  return x&-x;
@@ -49,7 +48,7 @@ int main()
    add(num[i],1);
    d[i]=sum(num[i])-1;
   }
-  ll ans=0;
+  long long ans=0;
   for(int i=0;i<n;i++)
    ans+=c[i]*(n-i-1-d[i])+(i-c[i])*d[i];
   cout<<ans<<endl;

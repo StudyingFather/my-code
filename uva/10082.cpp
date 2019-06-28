@@ -9,9 +9,9 @@ int main()
   for(int i=1;i<=47;i++)
    if(s[i]==c)
    {
-   	flag=0;
-   	putchar(s[i-1]);
-   	break;
+    flag=0;
+    putchar(s[i-1]);
+    break;
    }
   if(flag)putchar(c);
  }

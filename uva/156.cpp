@@ -6,8 +6,8 @@
 #include <map>
 #include <algorithm>
 using namespace std;
-map<string,int>cnt;
-vector<string>words;
+map<string,int> cnt;
+vector<string> words;
 string repr(const string&s)
 {
  string ans=s;
