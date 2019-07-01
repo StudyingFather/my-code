@@ -3,10 +3,10 @@
 #include <unordered_map>
 #include <cstring>
 using namespace std;
-unordered_map<int,int> num;//记得将标准设成c++11 
+unordered_map<int,int> num;
 int fa[200005];
 int tj[100005][2];
-int find(int a)//用递归写会爆栈，所以这里用非递归写了 
+int find(int a)
 {
  int r=a;
  while(r!=fa[r])
@@ -45,12 +45,12 @@ int main()
   {
    int i,j,e;
    scanf("%d%d%d",&i,&j,&e);
-   if(num[i]==0)num[i]=++cnt;//map大法好，但常数确实大了 
-   if(num[j]==0)num[j]=++cnt;//可以试试unordered_map？ 
+   if(num[i]==0)num[i]=++cnt;
+   if(num[j]==0)num[j]=++cnt;
    if(e)unionn(find(num[i]),find(num[j]));
    else
    {
-   	cntt++;
+    cntt++;
     tj[cntt][0]=num[i];
     tj[cntt][1]=num[j];
    }
@@ -59,9 +59,9 @@ int main()
   for(int i=1;i<=cntt;i++)
    if(find(tj[i][0])==find(tj[i][1]))
    {
-   	puts("NO");
-   	flag=0;
-   	break;
+    puts("NO");
+    flag=0;
+    break;
    }
   if(flag)puts("YES");
  }

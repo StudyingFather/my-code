@@ -20,13 +20,13 @@ int main()
   while(abs((int)q1.size()-(int)q2.size())>1)
    if(q1.size()>q2.size())
    {
-	q2.push(q1.top());
-	q1.pop();
+    q2.push(q1.top());
+    q1.pop();
    }
    else
    {
-	q1.push(q2.top());
-	q2.pop();
+    q1.push(q2.top());
+    q2.pop();
    }
   if(i%2)
   {

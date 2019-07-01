@@ -29,8 +29,8 @@ int main()
   {
    if(a==b)
    {
-   	cout<<-1<<endl;
-   	return 0;
+    cout<<-1<<endl;
+    return 0;
    }
    else addedge(a,b,1);
   }
@@ -39,8 +39,8 @@ int main()
   {
    if(a==b)
    {
-   	cout<<-1<<endl;
-   	return 0;
+    cout<<-1<<endl;
+    return 0;
    }
    else addedge(b,a,1);
   }
@@ -58,18 +58,18 @@ int main()
   for(int i=head[cur];i;i=e[i].next)
    if(dist[cur]+e[i].w>dist[e[i].v])
    {
-   	dist[e[i].v]=dist[cur]+e[i].w;
-   	if(!vis[e[i].v])
-   	{
-   	 vis[e[i].v]=1;
-   	 q.push(e[i].v);
-   	 tot[e[i].v]++;
-   	 if(tot[e[i].v]>=n)
-   	 {
-   	  cout<<-1<<endl;
-   	  return 0;
-   	 }
-   	}
+    dist[e[i].v]=dist[cur]+e[i].w;
+    if(!vis[e[i].v])
+    {
+     vis[e[i].v]=1;
+     q.push(e[i].v);
+     tot[e[i].v]++;
+     if(tot[e[i].v]>=n)
+     {
+      cout<<-1<<endl;
+      return 0;
+     }
+    }
    }
  }
  for(int i=1;i<=n;i++)

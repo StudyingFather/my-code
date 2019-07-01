@@ -1,5 +1,5 @@
 #include <stdio.h>
-int a[10001][100],b[10001][100],c[10001];
+int a[10005][100],b[10005][100],c[10005];
 int main()
 {
  int n,m,i,j,t,s,x,ans=0;

@@ -34,12 +34,12 @@ bool bfs()
   for(int i=head[p];i;i=e[i].next)
    if(dep[e[i].v]>dep[p]+1&&e[i].w)
    {
-	dep[e[i].v]=dep[p]+1;
-	if(!vis[e[i].v])
-	{
-	 vis[e[i].v]=1;
-	 q.push(e[i].v);
-	}
+    dep[e[i].v]=dep[p]+1;
+    if(!vis[e[i].v])
+    {
+     vis[e[i].v]=1;
+     q.push(e[i].v);
+    }
    }
  }
  if(dep[t]==INF)return 0;
@@ -57,10 +57,10 @@ int dfs(int p,int w)
    int flow=dfs(e[i].v,min(w-used,e[i].w));
    if(flow)
    {
-	used+=flow;
-	e[i].w-=flow;
-	e[i^1].w+=flow;
-	if(used==w)break;
+    used+=flow;
+    e[i].w-=flow;
+    e[i^1].w+=flow;
+    if(used==w)break;
    }
   }
  }

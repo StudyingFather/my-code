@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-int a[30];
-char b[100];
+int a[35];
+char b[105];
 int prime(int n)
 {
  if(n==1||n==0)return 0;

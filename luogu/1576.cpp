@@ -49,12 +49,12 @@ int main()
   for(int i=head[cur];i;i=e[i].next)
    if(p[e[i].v].dist<p[cur].dist*e[i].w)
    {
-   	p[e[i].v].dist=p[cur].dist*e[i].w;
-   	if(!vis[e[i].v])
-   	{
-   	 q.push(p[e[i].v]);
-   	 vis[e[i].v]=1;
-   	}
+    p[e[i].v].dist=p[cur].dist*e[i].w;
+    if(!vis[e[i].v])
+    {
+     q.push(p[e[i].v]);
+     vis[e[i].v]=1;
+    }
    }
  }
  printf("%.8lf\n",100/p[b].dist);

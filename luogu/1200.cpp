@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-char a[10],b[10];
+char a[15],b[15];
 int a1=1,b1=1;
 int main()
 {

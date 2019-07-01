@@ -1,25 +1,24 @@
-#include<stdio.h>
-#include<string.h>
-#include<math.h>
-#define MAX 500+10
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
 void calc(int*a,int*b)
 {
  int i,j;
  int c[MAX];
  memset(c,0,sizeof(c));
  for(i=0;i<500;i++)
- for(j=0;j<500;j++)
- {
-  if(i+j<500)
+  for(j=0;j<500;j++)
   {
-   c[i+j]+=a[i]*b[j];
-   c[i+j+1]+=c[i+j]/10;
-   c[i+j]=c[i+j]%10;
+   if(i+j<500)
+   {
+    c[i+j]+=a[i]*b[j];
+    c[i+j+1]+=c[i+j]/10;
+    c[i+j]=c[i+j]%10;
+   }
   }
- }
  memcpy(a,c,500*sizeof(int));
 }
-int a[MAX],ans[MAX];
+int a[505],ans[505];
 int main()
 {
  int n,i,x;

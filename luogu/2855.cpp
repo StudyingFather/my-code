@@ -3,7 +3,7 @@
 #include <cstring>
 #include <algorithm>
 using namespace std;
-int stone[400100];
+int stone[400005];
 int main()
 {
  int i,j,mid;

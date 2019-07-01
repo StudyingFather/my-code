@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
-long long a[100005],sum[400005],add[400005];//线段树要开4倍（划重点）空间，否则你懂的 
-void pushup(int rt)//将子节点数值合并到根节点 
+long long a[100005],sum[400005],add[400005];
+void pushup(int rt)
 {
- sum[rt]=sum[rt<<1]+sum[(rt<<1)+1];//加法运算优先级高于左移，所以括号不能漏掉 
+ sum[rt]=sum[rt<<1]+sum[(rt<<1)+1];
 }
-void pushdown(int ln,int rn,int rt)//下推标记
+void pushdown(int ln,int rn,int rt)
 {
  if(add[rt])
  {
@@ -16,7 +16,7 @@ void pushdown(int ln,int rn,int rt)//下推标记
   add[rt]=0;
  }
 }
-void build(int l,int r,int rt)//递归建树
+void build(int l,int r,int rt)
 {
  if(l==r)
  {
@@ -28,7 +28,7 @@ void build(int l,int r,int rt)//递归建树
  build(m+1,r,(rt<<1)+1);
  pushup(rt);
 }
-void update(int L,int R,long long c,int l,int r,int rt)//区间修改 
+void update(int L,int R,long long c,int l,int r,int rt)
 {
  if(L<=l&&r<=R)
  {
@@ -42,7 +42,7 @@ void update(int L,int R,long long c,int l,int r,int rt)//区间修改
  if(R>m)update(L,R,c,m+1,r,(rt<<1)+1);
  pushup(rt);
 }
-long long quary(int L,int R,int l,int r,int rt)//区间查询 
+long long quary(int L,int R,int l,int r,int rt)
 {
  if(L<=l&&r<=R)return sum[rt];
  int m=(l+r)>>1;

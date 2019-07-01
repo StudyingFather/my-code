@@ -47,10 +47,10 @@ int main()
   for(int i=head[curp];i;i=e[i].next)
    if(vis[e[i].v]==0&&dist[curp]+e[i].w<dist[e[i].v])
    {
-   	p.dist=dist[curp]+e[i].w;
-   	p.id=e[i].v;
-   	dist[e[i].v]=dist[curp]+e[i].w;
-   	q.push(p);
+    p.dist=dist[curp]+e[i].w;
+    p.id=e[i].v;
+    dist[e[i].v]=dist[curp]+e[i].w;
+    q.push(p);
    }
  }
  for(int i=1;i<=n;i++)

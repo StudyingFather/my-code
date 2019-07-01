@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 int n,card[501][501],mx1,mx2,ans=0;
 int main()
 {

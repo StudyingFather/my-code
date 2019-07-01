@@ -1,8 +1,7 @@
-#include<cstdio>
-#include<algorithm>
-#include<cmath>
+#include <cstdio>
+#include <algorithm>
+#include <cmath>
 using namespace std;
-const int MAXN=100005;
 struct Mis
 {
  int w1,w2;
@@ -11,7 +10,7 @@ int cmp(const Mis&a,const Mis&b)
 {
  return a.w1<b.w1;
 }
-Mis w[MAXN];
+Mis w[100005];
 int xa,ya,xb,yb;
 int n;
 int main()

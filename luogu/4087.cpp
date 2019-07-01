@@ -40,25 +40,24 @@ int main()
   sort(c2+1,c2+cnt+1,cmp2);
   maxg=c2[1].g;
   for(int j=1;;j++)
-   if(c2[j].g!=maxg&&c3[j].g!=premaxg)break;//结果不变 
+   if(c2[j].g!=maxg&&c3[j].g!=premaxg)break;
    else if(c2[j].g!=maxg&&c3[j].g==premaxg)
    {
-   	ans++;
-   	break;
+    ans++;
+    break;
    }
    else if(c2[j].g==maxg&&c3[j].g!=premaxg)
    {
     ans++;
     break;
    }
-   //以上为第一名的数量改变
-   else if(c2[j].id!=c3[j].id)//第一名id改变 
+   else if(c2[j].id!=c3[j].id)
    {
-   	ans++;
-   	break;
+    ans++;
+    break;
    }
   premaxg=maxg;
-  memcpy(c3,c2,sizeof(c2));//存放至上一次结果区 
+  memcpy(c3,c2,sizeof(c2));
  }
  printf("%d",ans);
  return 0;

@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 char c;
-int a[10000][2],b=0,d=0,i,l=0,p=0,w=0;
+int a[10005][2],b,d,i,l,p,w;
 int main()
 {
  while(1)

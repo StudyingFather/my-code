@@ -29,7 +29,7 @@ void SPFA()
    int t=e[i].t;
    if(a2[t]==-1||a2[t]<a1[t]-a1[x])
    {
-   	v[t]=0;
+    v[t]=0;
     a2[t]=max(a1[t]-a1[x],0);
    }
    if(a2[t]<a2[x])
@@ -39,7 +39,7 @@ void SPFA()
    }
    if(v[t]==0)
    {
-   	v[t]=1;
+    v[t]=1;
     qu.push(t);
    }
   }

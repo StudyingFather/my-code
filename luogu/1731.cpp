@@ -17,7 +17,7 @@ void dfs(int now,int s,int v,int lr,int lh)
  if(s+(n-v)*2/lr>ans)return;
  int maxr=min((int)sqrt((double)n-v),lr-1);
  for(int i=maxr;i>=now;i--)
- {		
+ {
   if(now==m)s=i*i;
   int maxh=min((n-v-mv[now-1])/(i*i),lh-1);
   for(int j=maxh;j>=now;j--)

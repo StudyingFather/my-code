@@ -48,8 +48,8 @@ int main()
    memset(vis,0,sizeof(vis));
    if(dfs(1,0,1))
    {
-   	printf("%d\n",l);
-   	return 0;
+    printf("%d\n",l);
+    return 0;
    }
   }
 }

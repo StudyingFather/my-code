@@ -1,8 +1,8 @@
-#include<cstdio>
-#include<cstring>
-#include<iostream>
-#include<string>
-#include<cmath>
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <string>
+#include <cmath>
 using namespace std;
 int l,r,a[100];
 bool p[100000001];

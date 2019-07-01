@@ -17,8 +17,8 @@ int main()
    nexts++;
    if(!t[a[nexts]])
    {
-   	t[a[nexts]]=1;
-   	cnt++;
+    t[a[nexts]]=1;
+    cnt++;
    }
   }
   if(cnt==k)

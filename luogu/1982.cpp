@@ -1,9 +1,9 @@
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
-#include<algorithm>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
 using namespace std;
-long long a[1000001][3];
+long long a[1000005][3];
 int main()
 {
  int n,p;

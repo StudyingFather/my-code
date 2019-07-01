@@ -1,5 +1,5 @@
 #include <stdio.h>
-int f[500][500];
+int f[505][505];
 int main()
 {
  int n,k;

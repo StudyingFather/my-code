@@ -16,9 +16,9 @@ int main()
   for(int i=1;i<=n;i++)
    if(num%mod[a]==b[i]%mod[a])
    {
-   	printf("%d\n",b[i]);
-   	flag=1;
-   	break;
+    printf("%d\n",b[i]);
+    flag=1;
+    break;
    }
   if(!flag)printf("-1\n");
  }

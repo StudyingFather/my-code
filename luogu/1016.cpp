@@ -1,8 +1,8 @@
-#include<cstring>
-#include<algorithm>
-#include<cmath>
-#include<cstdlib>
-#include<cstdio>
+#include <cstring>
+#include <algorithm>
+#include <cmath>
+#include <cstdlib>
+#include <cstdio>
 using namespace std;
 double d1,c,d2,p;
 double value[10000],way[10000],over[10000],x[10000];

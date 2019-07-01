@@ -1,5 +1,5 @@
-#include<cstdio>
-#include<cstring>
+#include <cstdio>
+#include <cstring>
 using namespace std;
 long color[100005][3][2],number[100005],count[100005][2];
 int main()

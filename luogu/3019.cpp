@@ -23,8 +23,8 @@ int main()
   {
    if(t[b]==1)//两者路径最早相交之处，即为最近公共祖先
    {
-   	printf("%d\n",b);
-   	break;
+    printf("%d\n",b);
+    break;
    }
    b=fa[b];
   }

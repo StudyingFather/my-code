@@ -37,14 +37,14 @@ bool spfa()
   for(int i=head[cur];i;i=e[i].next)
    if(e[i].w&&dist[cur]+e[i].f<dist[e[i].v])
    {
-	dist[e[i].v]=dist[cur]+e[i].f;
-	p[e[i].v].v=cur;
-	p[e[i].v].e=i;
-	if(!vis[e[i].v])
-	{
-	 vis[e[i].v]=1;
-	 q.push(e[i].v);
-	}
+    dist[e[i].v]=dist[cur]+e[i].f;
+    p[e[i].v].v=cur;
+    p[e[i].v].e=i;
+    if(!vis[e[i].v])
+    {
+     vis[e[i].v]=1;
+     q.push(e[i].v);
+    }
    }
  }
  return dist[t]!=INF;

@@ -1,5 +1,5 @@
 #include <stdio.h>
-int n,maxn,sum,a[100001],b[100001],c[100001][101],t,p=0,x,y;
+int n,maxn,sum,a[100005],b[100005],c[100005][105],t,p=0,x,y;
 int main()
 {
  scanf("%d",&n);

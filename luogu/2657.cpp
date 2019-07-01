@@ -24,7 +24,7 @@ int calc(int n)
   for(int j=0;j<num[i];j++)
    if(abs(j-num[i+1])>=2)ans+=f[i][j];
   if(abs(num[i+1]-num[i])<2)break;
-  if(i==1)ans++;	
+  if(i==1)ans++;
  }
  return ans;
 }

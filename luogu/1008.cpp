@@ -23,8 +23,8 @@ int main()
   for(int i=1;i<=9;i++)
    if(vis[i]!=1)
    {
-   	flag=0;
-   	break;
+    flag=0;
+    break;
    }
   if(flag==1)printf("%d %d %d\n",a,b,c);
  }

@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <algorithm>
 using namespace std;
-int n,m,p[1001],v[1001],f[1001][1001];
+int n,m,p[1005],v[1005],f[1005][1005];
 int main()
 {
  scanf("%d%d",&n,&m);

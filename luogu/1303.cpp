@@ -1,5 +1,5 @@
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
 int a[2005],b[2005],c[4005];
 char s1[2005],s2[2005],s3[4005];

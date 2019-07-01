@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <algorithm>
 using namespace std;
-int a[350],f[45][45][45][45],t[5];
+int a[355],f[45][45][45][45],t[5];
 int main()
 {
  int n,m;

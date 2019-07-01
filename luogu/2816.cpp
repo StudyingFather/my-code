@@ -15,9 +15,9 @@ int main()
   for(int j=1;j<=ans;j++)
    if(b[j]<=a[i])
    {
-   	b[j]++;
-   	flag=true;
-   	break;
+    b[j]++;
+    flag=true;
+    break;
    }
   if(!flag)b[++ans]=1;
  }

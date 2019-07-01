@@ -42,15 +42,15 @@ int main()
   for(int i=head[cur];i;i=e[i].next)
    if(dist2[cur]<e[i].k)
     if(dist1[cur]+e[i].t<dist1[e[i].v]||(dist1[cur]+e[i].t==dist1[e[i].v]&&dist2[cur]+1<dist2[e[i].v]))
-	{
-	 dist2[e[i].v]=dist2[cur]+1;
-	 dist1[e[i].v]=dist1[cur]+e[i].t;
-	 if(!vis[cur])
-	 {
-	  que.push(e[i].v);
-	  vis[e[i].v]=1;
-	 }
-	}
+    {
+     dist2[e[i].v]=dist2[cur]+1;
+     dist1[e[i].v]=dist1[cur]+e[i].t;
+     if(!vis[cur])
+     {
+      que.push(e[i].v);
+      vis[e[i].v]=1;
+     }
+    }
  }
  if(dist1[q]==INF)cout<<"bao 0"<<endl;
  else cout<<dist1[q]<<endl;

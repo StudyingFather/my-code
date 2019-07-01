@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #define tmax 86400
-#define len 300005
-int t[len],a[len],b[len],s[len];
+int t[300005],a[300005],b[300005],s[300005];
 int main()
 {
  int n,i,j,k,p,r,ans;

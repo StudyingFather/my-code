@@ -26,8 +26,8 @@ int main()
   for(int j=1;j<=n;j++)
    if(pow(x-p[j].x,2)+pow(y-p[j].y,2)<pow(l*1.0/n,2))
    {
-   	flag=false;
-   	break;
+    flag=false;
+    break;
    }
   if(flag)
   {

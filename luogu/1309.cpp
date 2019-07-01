@@ -1,10 +1,10 @@
-#include<stdio.h>
-#include<algorithm>
+#include <cstdio>
+#include <algorithm>
 using namespace std;
 struct player
 {
  int num,s,w;
-}a[200000],win[100000],lose[100000];
+}a[200005],win[100005],lose[100005];
 bool cmp(const player&a,const player&b)
 {
  return a.s>b.s||(a.s==b.s&&a.num<b.num);

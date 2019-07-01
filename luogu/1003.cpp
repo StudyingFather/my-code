@@ -1,5 +1,5 @@
 #include <stdio.h>
-int ditan[10001][5];
+int ditan[10005][5];
 int main()
 {
  int n,i,a,b,g,k,x,y;

@@ -1,5 +1,5 @@
 #include <algorithm>
-#include <cstdio> 
+#include <cstdio>
 using namespace std;
 int m,s,t,MaxDist;
 struct DP
@@ -26,7 +26,7 @@ int main()
   dp[i].f=max(dp[i-1].f+17,dp[i].g);
  }
  if(dp[t].f<s)printf("No\n%d",dp[t].f);
- else 
+ else
  {
   while(dp[t].f>=s)
    t--;

@@ -17,8 +17,8 @@ int main()
   for(int j=1;j<=m;j++)
    if(x>=a[j].x1&&x<=a[j].x2&&y>=a[j].y1&&y<=a[j].y2)
    {
-   	ans++;
-   	last=j;
+    ans++;
+    last=j;
    }
   if(!ans)printf("NO\n");
   else printf("YES %d %d\n",ans,last);

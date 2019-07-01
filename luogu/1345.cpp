@@ -35,11 +35,11 @@ bool bfs()
   for(int i=head[cur];i;i=e[i].next)
    if((!vis[e[i].v])&&e[i].w)
    {
-   	p[e[i].v].v=cur;
-   	p[e[i].v].e=i;
-   	if(e[i].v==c2)return 1;
-   	vis[e[i].v]=1;
-   	q.push(e[i].v);
+    p[e[i].v].v=cur;
+    p[e[i].v].e=i;
+    if(e[i].v==c2)return 1;
+    vis[e[i].v]=1;
+    q.push(e[i].v);
    }
  }
  return 0;

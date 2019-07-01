@@ -13,7 +13,7 @@ int main()
  for(int i=0;i<len;i++)
  {
   ans+=min(abs(arr-str[i]),26-abs(arr-str[i]));
-  arr=str[i];	
+  arr=str[i];
  }
  printf("%d",ans);
  return 0;

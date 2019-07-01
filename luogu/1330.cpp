@@ -45,8 +45,8 @@ int main()
    x=0,y=0;
    if(!dfs(i,0))
    {
-	puts("Impossible");
-	return 0;
+    puts("Impossible");
+    return 0;
    }
    ans+=min(x,y);
   }

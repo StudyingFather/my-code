@@ -17,8 +17,8 @@ int main()
    cnt--;
    if(cnt<0)
    {
-   	printf("NO");
-   	break;
+    printf("NO");
+    break;
    }
   }
  return 0;

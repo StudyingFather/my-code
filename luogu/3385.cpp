@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define INF 0x3f
+#define INF 0x3f3f3f3f
 struct edge
 {
  int t,w,next;
@@ -27,13 +27,13 @@ inline bool spfa()
   {
    if(d[h]+e[i].w<d[e[i].t])
    {
-   	vt[e[i].t]++;
-   	if(vt[e[i].t]>=n)return 1;
-   	d[e[i].t]=d[h]+e[i].w;
-   	if(!vis[e[i].t])
-   	{
-   	 q[++r]=e[i].t;
-   	 vis[e[i].t]=1;
+    vt[e[i].t]++;
+    if(vt[e[i].t]>=n)return 1;
+    d[e[i].t]=d[h]+e[i].w;
+    if(!vis[e[i].t])
+    {
+     q[++r]=e[i].t;
+     vis[e[i].t]=1;
     }
    }
   }
