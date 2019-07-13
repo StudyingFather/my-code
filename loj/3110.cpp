@@ -4,7 +4,7 @@
 #define MOD 10000019
 using namespace std;
 long long inv[10000025],sum,add,mul=1,all,lastt,ans,n,q,t;
-unordered_map<int,long long> a,tag;
+unordered_map<long long,long long> a,tag;
 struct operation
 {
  long long op,x,val;
@@ -19,30 +19,31 @@ inline void calc_inv()
  for(int i=2;i<=MOD-1;i++)
   inv[i]=(MOD-MOD/i)*inv[MOD%i]%MOD;
 }
-inline void upd_single(int x,int val,int t)
+inline void upd_single(long long x,long long val,long long t)
 {
  if(tag[x]>lastt)sum-=a[x]*mul+add;
  else sum-=all*mul+add;
- sum=(sum%MOD+MOD+val)%MOD;
+ sum=(sum+val)%MOD;
  a[x]=(val-add+MOD)*inv[mul]%MOD;
  tag[x]=t;
 }
-inline void upd_all(int val,int t)
+inline void upd_all(long long val,long long t)
 {
  all=val,lastt=t;
+ a.clear(),tag.clear();
  mul=1,add=0,sum=(val*n)%MOD;
 }
-inline void add_all(int val)
+inline void add_all(long long val)
 {
  sum+=n*val,sum%=MOD;
  add+=val,add%=MOD;
 }
-inline void mul_all(int val)
+inline void mul_all(long long val)
 {
  sum*=val,add*=val,mul*=val;
  sum%=MOD,add%=MOD,mul%=MOD;
 }
-inline int query_single(int x)
+inline int query_single(long long x)
 {
  if(tag[x]>lastt)return (a[x]*mul+add)%MOD;
  else return (all*mul+add)%MOD;
@@ -50,6 +51,7 @@ inline int query_single(int x)
 int main()
 {
  ios::sync_with_stdio(false);
+ cin.tie(0);
  cin>>n>>q;
  calc_inv();
  for(int i=1;i<=q;i++)
@@ -58,7 +60,8 @@ int main()
   if(o[i].op==1)cin>>o[i].x>>o[i].val;
   else if(o[i].op>=2&&o[i].op<=4)cin>>o[i].val;
   else if(o[i].op==5)cin>>o[i].x;
-  o[i].val=(o[i].val%MOD+MOD)%MOD;
+  o[i].val%=MOD;
+  if(o[i].val<0)o[i].val+=MOD;
  }
  cin>>t;
  for(int i=1;i<=t;i++)
