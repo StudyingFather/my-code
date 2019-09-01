@@ -1,3 +1,9 @@
+/*
+ Name: Google Code Jam 2019 Qualification Round Problem B
+ Author: StudyingFather
+ Date: 2019/06/13 21:18
+ Website: https://studyingfather.com
+*/
 #include <cstdio>
 char s[100005];
 int main()

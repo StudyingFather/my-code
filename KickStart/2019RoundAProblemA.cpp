@@ -1,3 +1,9 @@
+/*
+ Name: Kick Start 2019 Round A Problem A
+ Author: StudyingFather
+ Date: 2019/06/13 20:25
+ Website: https://studyingfather.com
+*/
 #include <cstdio>
 #include <algorithm>
 #define INF 2147483647
