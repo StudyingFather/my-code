@@ -1,3 +1,9 @@
+/*
+ Name: Atcoder Beginner Contest 141C
+ Author: StudyingFather
+ Date: 2019/08/18 20:12
+ Website: https://studyingfather.com
+*/
 #include <cstdio>
 int a[100005];
 int main()

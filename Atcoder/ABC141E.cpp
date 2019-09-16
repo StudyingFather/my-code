@@ -1,3 +1,9 @@
+/*
+ Name: Atcoder Beginner Contest 141E
+ Author: StudyingFather
+ Date: 2019/08/18 22:50
+ Website: https://studyingfather.com
+*/
 #include <cstdio>
 #include <set>
 #define MOD 1000000007

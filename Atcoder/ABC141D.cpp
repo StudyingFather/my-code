@@ -1,3 +1,9 @@
+/*
+ Name: Atcoder Beginner Contest 141D
+ Author: StudyingFather
+ Date: 2019/08/18 20:19
+ Website: https://studyingfather.com
+*/
 #include <iostream>
 #include <queue>
 #include <algorithm>
