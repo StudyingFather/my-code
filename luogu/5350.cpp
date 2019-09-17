@@ -1,3 +1,9 @@
+/*
+ Name: luogu P5350
+ Author: StudyingFather
+ Date: 2019/09/17 21:12
+ Website: https://studyingfather.com
+*/
 #include <cstdio>
 #include <algorithm>
 #include <set>
@@ -62,6 +68,7 @@ void copy(int l1,int r1,int l2,int r2)
 }
 void swap(int l1,int r1,int l2,int r2)
 {
+ if(l1>l2)swap(l1,l2),swap(r1,r2);
  int d=l2-l1;
  vector<node> v;
  auto itr=split(r1+1),itl=split(l1);
