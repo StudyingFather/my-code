@@ -1,3 +1,9 @@
+/*
+ Name: luogu P5560
+ Author: StudyingFather
+ Date: 2019/09/19 23:32
+ Website: https://studyingfather.com
+*/
 #include <iostream>
 using namespace std;
 int main()
