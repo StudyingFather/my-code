@@ -1,3 +1,9 @@
+/*
+ Name: luogu P3888
+ Author: StudyingFather
+ Date: 2019/09/29 17:36
+ Website: https://studyingfather.com
+*/
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
