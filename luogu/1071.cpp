@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <string.h> 
+#include <cstdio>
+#include <cstring> 
 char zimu[35],password[105],word[105],wanted[105],use[35];
 int main()
 {
@@ -12,13 +12,13 @@ int main()
  {
   if(!zimu[password[i]-64])
   {
-   if(use[word[i]])
+   if(use[word[i]-64])
    {
     printf("Failed");
     return 0;
    }
    zimu[password[i]-64]=word[i];
-   use[word[i]]=1;
+   use[word[i]-64]=1;
    used++;
   }
   else if(zimu[password[i]-64]!=word[i])

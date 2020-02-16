@@ -87,7 +87,7 @@ int main()
   {
    int x;
    scanf("%d",&x);
-   addedge(i,j+n,INF,x);
+   addedge(i,j+n,1,x);
    addedge(j+n,i,0,-x);
   }
  printf("%d\n",mfmc(1));
