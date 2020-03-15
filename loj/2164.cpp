@@ -4,7 +4,7 @@ using namespace std;
 int l[1000005],r[1000005],q[1000005];
 int main()
 {
- int n,h=0,t=0,ans=0;
+ int n,h=1,t=0,ans=0;
  scanf("%d",&n);
  for(int i=1;i<=n;i++)
   scanf("%d%d",&l[i],&r[i]);
