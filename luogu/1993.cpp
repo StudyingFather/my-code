@@ -7,30 +7,15 @@ struct edge
 {
  int v,w,next;
 }e[40005];
-int head[10005],vis[10005],tot[10005],cnt,que[10005],l,r,flag;
+int head[10005],vis[10005],tot[10005],cnt;
 long long ans,dist[10005];
+queue<int> q;
 inline void addedge(int u,int v,int w)
 {
  e[++cnt].v=v;
  e[cnt].w=w;
  e[cnt].next=head[u];
  head[u]=cnt;
-}
-void dfs_spfa(int x)
-{
- vis[x]=1;
- for(int i=head[x];i;i=e[i].next)
-  if(dist[x]+e[i].w>dist[e[i].v])
-  {
-   if(vis[e[i].v]||flag)
-   {
-    flag=1;
-    return;
-   }
-   dist[e[i].v]=dist[x]+e[i].w;
-   dfs_spfa(e[i].v);
-  }
- vis[x]=0;
 }
 int main()
 {
@@ -61,7 +46,30 @@ int main()
   addedge(0,i,0);
  memset(dist,-0x3f,sizeof(dist));
  dist[0]=0;
- dfs_spfa(0);
- puts(flag?"No":"Yes");
+ vis[0]=1;
+ q.push(0);
+ while(!q.empty())
+ {
+  int cur=q.front();
+  q.pop();
+  vis[cur]=0;
+  for(int i=head[cur];i;i=e[i].next)
+   if(dist[cur]+e[i].w>dist[e[i].v])
+   {
+   	dist[e[i].v]=dist[cur]+e[i].w;
+   	if(!vis[e[i].v])
+   	{
+   	 vis[e[i].v]=1;
+   	 q.push(e[i].v);
+   	 tot[e[i].v]++;
+   	 if(tot[e[i].v]>=n)
+   	 {
+   	  puts("No");
+   	  return 0;
+   	 }
+   	}
+   }
+ }
+ puts("Yes");
  return 0;
 }

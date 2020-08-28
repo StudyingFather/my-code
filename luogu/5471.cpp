@@ -1,4 +1,12 @@
-#include <iostream>
+
+// Problem: P5471 [NOI2019]弹跳
+// Contest: Luogu
+// URL: https://www.luogu.com.cn/problem/P5471
+// Memory Limit: 125 MB
+// Time Limit: 2200 ms
+// Powered by CP Editor (https://github.com/cpeditor/cpeditor)
+
+#include <cstdio>
 #include <vector>
 #include <set>
 #include <queue>
@@ -52,16 +60,15 @@ void modify(int root,int cl,int cr,int x,int d)
  if(l<=cl&&cr<=r)
  {
   auto it=s[root].lower_bound((point){0,e[x].d,0});
-  //在线段树套 set 里找每个装置能到达的点
   for(;it!=s[root].end()&&it->y<=e[x].u;it++)
   {
    int u=it->id;
-   dis[u]=d;//更新这些点的最短路
+   dis[u]=d;
    dq.push(u);
-   for(auto v:f[u])//将经过当前装置能到达的下一个装置插入堆
+   for(auto v:f[u])
     q.push({v,d+e[v].t});
   }
-  while(!dq.empty())//将这些点从数据结构中删除
+  while(!dq.empty())
   {
    int u=dq.front();
    dq.pop();
@@ -75,18 +82,17 @@ void modify(int root,int cl,int cr,int x,int d)
 }
 int main()
 {
- ios::sync_with_stdio(false);
- cin>>n>>m>>w>>h;
+ scanf("%d%d%d%d",&n,&m,&w,&h);
  for(int i=1;i<=n;i++)
  {
-  cin>>p[i].x>>p[i].y;
+  scanf("%d%d",&p[i].x,&p[i].y);
   p[i].id=i;
-  add(1,1,n,i);//将所有点扔进线段树套 set 里
+  add(1,1,n,i);
  }
  for(int i=1;i<=m;i++)
  {
-  cin>>e[i].p>>e[i].t>>e[i].l>>e[i].r>>e[i].d>>e[i].u;
-  f[e[i].p].push_back(i);//维护从 i 号点出发的装置列表
+  scanf("%d%d%d%d%d%d",&e[i].p,&e[i].t,&e[i].l,&e[i].r,&e[i].d,&e[i].u);
+  f[e[i].p].push_back(i);
  }
  e[0].l=e[0].r=p[1].x;
  e[0].d=e[0].u=p[1].y;
@@ -95,11 +101,11 @@ int main()
  {
   int u=q.top().u,d=q.top().dis;
   q.pop();
-  if(vis[u])continue;//和 Dijkstra 一样，已经走过的装置不必在走
+  if(vis[u])continue;
   vis[u]=1;
   modify(1,1,n,u,d);
  }
  for(int i=2;i<=n;i++)
-  cout<<dis[i]<<endl;
+  printf("%d\n",dis[i]);
  return 0;
 }
