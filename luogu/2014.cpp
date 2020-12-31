@@ -1,41 +1,40 @@
+
+// Problem: P2014 [CTSC1997]选课
+// Contest: Luogu
+// URL: https://www.luogu.com.cn/problem/P2014
+// Memory Limit: 125 MB
+// Time Limit: 1000 ms
+// Author: StudyingFather
+// Powered by CP Editor (https://cpeditor.org)
+
 #include <cstdio>
+#include <vector>
 #include <algorithm>
 using namespace std;
-struct edge
-{
- int v,next;
-}e[305];
-int head[305],f[305][305],cnt,s[305];
-void addedge(int u,int v)
-{
- e[++cnt].v=v;
- e[cnt].next=head[u];
- head[u]=cnt;
-}
-int dfs(int a)
+int f[305][305],s[305],n,m;
+vector<int> e[305];
+int dfs(int u)
 {
  int p=1;
- f[a][1]=s[a];
- for(int t=head[a];t;t=e[t].next)
+ f[u][1]=s[u];
+ for(auto v:e[u])
  {
-  int v=e[t].v;
-  int now=dfs(v);
-  for(int i=p;i;i--)
-   for(int j=1;j<=now;j++)
-    f[a][i+j]=max(f[a][i+j],f[a][i]+f[v][j]);
-  p+=now;
+  int siz=dfs(v);
+  for(int i=min(p,m+1);i;i--)
+   for(int j=1;j<=siz&&i+j<=m+1;j++)
+    f[u][i+j]=max(f[u][i+j],f[u][i]+f[v][j]);
+  p+=siz;
  }
  return p;
 }
 int main()
 {
- int n,m;
  scanf("%d%d",&n,&m);
  for(int i=1;i<=n;i++)
  {
-  int u;
-  scanf("%d%d",&u,&s[i]);
-  addedge(u,i);
+  int k;
+  scanf("%d%d",&k,&s[i]);
+  e[k].push_back(i);
  }
  dfs(0);
  printf("%d",f[0][m+1]);
