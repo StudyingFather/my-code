@@ -1,7 +1,7 @@
-// Problem: P1099 [NOIP2007 提高组] 树网的核
+// Problem: P2491 [SDOI2011] 消防
 // Contest: Luogu
-// URL: https://www.luogu.com.cn/problem/P1099
-// Memory Limit: 128 MB
+// URL: https://www.luogu.com.cn/problem/P2491
+// Memory Limit: 125 MB
 // Time Limit: 1000 ms
 //
 // Powered by CP Editor (https://cpeditor.org)
@@ -84,8 +84,8 @@ void solve() {
   cout << minecc << endl;
 }
 }  // namespace sub2
-namespace sub3 {
 int maxd[maxn];
+namespace sub3 {
 bool check(int ecc) {
   int l = 1, r = cnt;
   while (l < cnt && pres[l + 1] <= ecc) l++;
