@@ -1,37 +1,36 @@
-#include <stdio.h>
-#include <string.h>
-char s[1000005],t[1000005];
-int nxt[1000005];
-void getnext()
-{
- int len=strlen(t+1);
- nxt[1]=0;
- for(int i=2,j=0;i<=len;i++)
- {
-  while(j&&t[i]!=t[j+1])
-   j=nxt[j];
-  if(t[i]==t[j+1])j++;
-  nxt[i]=j;
- }
-}
-int main()
-{
- scanf("%s",s+1);
- scanf("%s",t+1);
- getnext();
- int lens=strlen(s+1),lent=strlen(t+1);
- for(int i=1,j=0;i<=lens;i++)
- {
-  while(j&&s[i]!=t[j+1])
-   j=nxt[j];
-  if(s[i]==t[j+1])j++;
-  if(j==lent)
-  {
-   printf("%d\n",i-lent+1);
-   j=nxt[j];
+// Problem: P3375 【模板】KMP字符串匹配
+// Contest: Luogu
+// URL: https://www.luogu.com.cn/problem/P3375
+// Memory Limit: 512 MB
+// Time Limit: 1000 ms
+// 
+// Powered by CP Editor (https://cpeditor.org)
+
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+string s, t;
+int pi[2000005];
+vector<int> res;
+int main() {
+  ios::sync_with_stdio(false);
+  cin >> s;
+  cin >> t;
+  int tl = t.length();
+  t.push_back('#');
+  t += s;
+  int l = t.length();
+  for (int i = 1; i < l; i++) {
+    int j = pi[i - 1];
+    while (j > 0 && t[i] != t[j]) j = pi[j - 1];
+    if (t[i] == t[j]) j++;
+    pi[i] = j;
   }
- }
- for(int i=1;i<=lent;i++)
-  printf("%d ",nxt[i]);
- return 0;
+  for (int i = tl + 1; i < l; i++)
+    if (pi[i] == tl) res.push_back(i - 2 * tl + 1);
+  for (auto x: res) cout << x << endl;
+  for (int i = 0; i < tl; i++) cout << pi[i] << ' ';
+  cout << endl;
+  return 0;
 }

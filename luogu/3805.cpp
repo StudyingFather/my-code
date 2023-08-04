@@ -1,40 +1,31 @@
-#include <cstdio>
-#include <cstring>
+// Problem: P3805 【模板】manacher 算法
+// Contest: Luogu
+// URL: https://www.luogu.com.cn/problem/P3805
+// Memory Limit: 512 MB
+// Time Limit: 500 ms
+//
+// Powered by CP Editor (https://cpeditor.org)
+
 #include <algorithm>
+#include <cstring>
+#include <iostream>
 using namespace std;
-char a[11000005],s[25000005];
-int f[25000005];
-void init()
-{
- s[0]=s[1]='#';//0位置防止越界
- int len=strlen(a);
- for(int i=0;i<len;i++)
- {
-  s[2*i+2]=a[i];
-  s[2*i+3]='#';
- }
- s[2*len+2]=0;
-}
-int main()
-{
- int ans=0;
- scanf("%s",a);
- init();
- int len=strlen(s),maxr=0,mid=0;
- for(int i=1;i<len;i++)
- {
-  if(i<maxr)
-   f[i]=min(f[mid]+(mid-i),f[mid*2-i]);
-  else f[i]=1;
-  while(s[i+f[i]]==s[i-f[i]])
-   f[i]++;
-  if(f[i]+i>maxr)
-  {
-   maxr=f[i]+i;
-   mid=i;
+char s[11000005], t[25000005];
+int d[25000005];
+int main() {
+  ios::sync_with_stdio(false);
+  cin >> s;
+  int sl = strlen(s), ans = 0;
+  t[0] = '#';
+  for (int i = 0; i < sl; i++) t[2 * i + 1] = s[i], t[2 * i + 2] = '#';
+  int l = 0, r = -1, tl = strlen(t);
+  for (int i = 0; i < tl; i++) {
+    int k = (i > r) ? 1 : min(d[l + r - i], r - i + 1);
+    while (i - k >= 0 && i + k <= tl && t[i - k] == t[i + k]) k++;
+    d[i] = --k;
+    ans = max(ans, k);
+    if (i + k > r) r = i + k, l = i - k;
   }
-  ans=max(ans,f[i]);
- }
- printf("%d\n",ans-1);
- return 0;
+  cout << ans << endl;
+  return 0;
 }
